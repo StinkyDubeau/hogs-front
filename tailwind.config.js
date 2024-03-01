@@ -9,8 +9,9 @@ export default {
     extend: {},
     fontFamily: {
       "tourmaline": ["Pixelify Sans", "sans-serif"],
-      "hogs": ["cursive", "sans-serif"],
-      "ipsum": ["Flow Circular", "sans-serif"]
+      "hogs": ["Barlow Semi Condensed", "sans-serif"],
+      "ipsum": ["Flow Circular", "sans-serif"],
+      "sansui": ["Josefin Sans", "sans-serif"],
     }
   },
   plugins: [],
