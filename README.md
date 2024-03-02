@@ -2,6 +2,11 @@
 
 Frontend for hogs website.
 
+## Developing:
+
+- npm
+- prettier
+
 Using:
 
 - Vite
@@ -9,3 +14,10 @@ Using:
 - Tailwind
 
 More to come.
+
+## Branches
+
+- main
+    Development branch
+- production
+    Deployed to AWS
