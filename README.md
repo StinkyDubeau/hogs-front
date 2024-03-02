@@ -9,3 +9,10 @@ Using:
 - Tailwind
 
 More to come.
+
+## Branches
+
+- main
+    Development branch
+- production
+    Deployed to AWS
