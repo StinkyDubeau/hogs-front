@@ -2,6 +2,11 @@
 
 Frontend for hogs website.
 
+## Developing:
+
+- npm
+- prettier
+
 Using:
 
 - Vite
