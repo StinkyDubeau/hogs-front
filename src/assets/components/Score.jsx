@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-export default function Score () {
+export default function Score() {
     const [scores, setScores] = useState([])
 
     useEffect(() => {
-        fetch('http://127.0.0.1:3001/api/scores', {
+        fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
             method: 'get',
             headers: new Headers({
                 API_KEY: 'this is a very insecure api key',
@@ -28,13 +28,14 @@ export default function Score () {
                 <p>Time: {score.time}</p>
                 <p>Gamemode: {score.game_mode}</p>
                 <p>Game version: {score.game_version}</p>
-                <p className="text-xs">Unique Score ID: {score._id}</p>           
+                <p className="text-xs">Unique Score ID: {score._id}</p>
             </div>
         )
     }
 
     return (
         <>
+            <p>API url: {`${import.meta.env.VITE_API_URL}/api/scores`}</p>
             <p>Loaded <span className="hover:bold underline">{scores.length}</span> scores from the server.</p>
             {scores.map(createScore)}
 
