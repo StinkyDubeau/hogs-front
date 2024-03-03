@@ -8,7 +8,7 @@ export default function Score () {
             method: 'get',
             headers: new Headers({
                 API_KEY: 'this is a very insecure api key',
-            })
+            }),
         })
             .then(response => response.json())
             .then(data => {
@@ -35,9 +35,7 @@ export default function Score () {
 
     return (
         <>
-            <p>I'm a score component -{5 + 5}-</p>
-
-            //Show all of the scores returned from the server. Display them all as simple cards for now.
+            <p>Loaded <span className="hover:bold underline">{scores.length}</span> scores from the server.</p>
             {scores.map(createScore)}
 
             <div className='text-left bg-slate-500 p-2 px-8 text-slate-800 border-slate-700 border-b-4 shadow-lg rounded-lg'>
