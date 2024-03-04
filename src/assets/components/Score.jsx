@@ -5,17 +5,17 @@ export default function Score() {
 
     useEffect(() => {
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
-            method: 'get',
             headers: new Headers({
                 API_KEY: 'this is a very insecure api key',
             }),
         })
             .then(response => response.json())
             .then(data => {
-                setScores(data)
+                console.log(data);
+                setScores(data);
             })
             .catch(err => {
-                console.log(err.message)
+                console.log(err)
             })
     }, [])
 
@@ -37,6 +37,7 @@ export default function Score() {
         <>
             <p>API url: {`${import.meta.env.VITE_API_URL}/api/scores`}</p>
             <p>Loaded <span className="hover:bold underline">{scores.length}</span> scores from the server.</p>
+
             {scores.map(createScore)}
 
             <div className='text-left bg-slate-500 p-2 px-8 text-slate-800 border-slate-700 border-b-4 shadow-lg rounded-lg'>
