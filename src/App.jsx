@@ -1,5 +1,6 @@
 import './App.css'
 import Score from './assets/components/Score.jsx'
+import Button from "./assets/components/Button.jsx"
 
 function App () {
     return (
@@ -23,12 +24,8 @@ function App () {
                 lorum ipsum text. Blah blah pepsi coke hooray! This is a
                 sentence.
             </p>
-            <button className='font-sansui bg-red-500 p-2 rounded-lg border-solid hover:bg-red-600 '>
-                Click me
-            </button>
-            <button className='font-sansui bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-                Button
-            </button>
+            <Button text="Click me!"/>
+            <Button text="Button"/>
             <Score />
         </>
     )
