@@ -4,8 +4,8 @@ import Leaderboard from './assets/components/Leaderboard.jsx'
 
 function App() {
     return (
-        <>>
-            <div className="backdrop-blur-xl border-slate-800 p-5 rounded-xl">
+        <>
+            <div className="backdrop-blur-xl border-white border-t-[#ffffff33] border-x-[#ffffff22] border-t-2 border-x p-5 rounded-xl">
                 {/* https://tailwindcss.com/docs/background-image */}
                 <h1 className='font-tourmaline text-3xl'>Tourmaline</h1>
                 <h1 className='font-hogs text-5xl'>H.O.G.S</h1>
