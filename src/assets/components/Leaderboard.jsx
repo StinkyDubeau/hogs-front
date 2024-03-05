@@ -9,6 +9,7 @@ export default function Leaderboard() {
             headers: new Headers({
                 API_KEY: 'this is a very insecure api key',
             }),
+            method: "POST",
         })
             .then(response => response.json())
             .then(data => {
@@ -28,7 +29,7 @@ export default function Leaderboard() {
                 <td>{score.level}</td>
                 <td>{score.points}</td>
                 <td>{score.time}</td>
-                <td className="text-right text-xs justify-between">
+                <td className="text-right text-xs justify-between text-slate-400">
                     <div>
                         <p>Gamemode: {score.game_mode}</p>
                         <p>Game version: {score.game_version}</p>
@@ -41,61 +42,19 @@ export default function Leaderboard() {
 
     function createLeaderboard(scores) {
         return (
-            <>
-                <table>
-                    <tr>
-                        <th>Position</th>
-                        <th>User</th>
-                        <th>Level</th>
-                        <th>Points</th>
-                        <th>Time</th>
-                        <th>Details</th>
-                    </tr>
-                    {scores.map(createRow)}
-                </table>
-
-            </>
+            <table className="table-auto w-full">
+                <tr>
+                    <th>Position</th>
+                    <th>User</th>
+                    <th>Level</th>
+                    <th>Points</th>
+                    <th>Time</th>
+                    <th>Details</th>
+                </tr>
+                {scores.map(createRow)}
+            </table>
         )
     }
-
-    // function createHeader(headers) {
-    //     return (
-    //         <>
-    //             <div className="overflow-scroll flex gap-5 justify-evenly text-left bg-slate-500 p-2 my-2 px-8 text-slate-800 border-slate-700 border-b-4 rounded-lg">
-    //                 <p>Position</p>
-    //                 <p>User</p>
-    //                 <p>Level</p>
-    //                 <p>Points</p>
-    //                 <p>Time</p>
-    //                 <p>Details</p>
-    //             </div>
-    //         </>
-    //     )
-    // }
-
-    // function createLeaderboard(score, index) {
-    //     return (
-    //         <>
-    //             {index === 0 && createHeader()}
-    //             <div className="overflow-scroll flex gap-5 justify-evenly text-left bg-slate-500 p-2 my-2 px-8 text-slate-800 border-slate-700 border-b-4 border-t-1 border-t-slate-200 rounded-lg">
-    //                 <p>{index}</p>
-    //                 <p>{score.user_id}</p>
-    //                 <p>{score.level}</p>
-    //                 <p>{score.points}</p>
-    //                 <p>{score.time}</p>
-
-    //                 <div className="text-right text-xs justify-between">
-    //                     <div>
-    //                         <p>Gamemode: {score.game_mode}</p>
-    //                         <p>Game version: {score.game_version}</p>
-    //                     </div>
-    //                     <p className="">{score._id}</p>
-    //                 </div>
-    //             </div>
-
-    //         </>
-    //     )
-    // }
 
     function createLoading() {
         return (
