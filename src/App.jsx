@@ -1,12 +1,12 @@
 import './App.css'
-import Score from './assets/components/Score.jsx'
 import Button from "./assets/components/Button.jsx"
+import Leaderboard from './assets/components/Leaderboard.jsx'
 
 function App() {
     return (
-        <>
-            <div className="bg-slate-300 p-5">
-            {/* https://tailwindcss.com/docs/background-image */}
+        <>>
+            <div className="backdrop-blur-xl border-slate-800 p-5 rounded-xl">
+                {/* https://tailwindcss.com/docs/background-image */}
                 <h1 className='font-tourmaline text-3xl'>Tourmaline</h1>
                 <h1 className='font-hogs text-5xl'>H.O.G.S</h1>
                 <p className='font-ipsum text-xs text-justify'>
@@ -28,7 +28,7 @@ function App() {
                 </p>
                 <Button text="Click me!" />
                 <Button text="Button" />
-                <Score />
+                <Leaderboard />
             </div>
         </>
     )

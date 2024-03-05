@@ -6,7 +6,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hogs-background': "url('/public/hogs-background.png')"
+      }
+    },
     fontFamily: {
       "tourmaline": ["Pixelify Sans", "sans-serif"],
       "hogs": ["Barlow Semi Condensed", "sans-serif"],
