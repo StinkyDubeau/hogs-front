@@ -59,19 +59,25 @@ export default function Leaderboard() {
         )
     }
 
+    function createLoading() {
+        return(
+            <p>Loading leaderboards...</p>
+        )
+    }
+
     return (
         <>
             <div>
                 <p>Choose columns:</p>
             </div>
 
-            <div className="bg-zinc-600 border-t-4 border-x-2 border-zinc-700 rounded-xl p-4">
-                {scores.map(createLeaderboard)}
+            <div className="bg-zinc-600 max-h-96 overflow-scroll border-t-4 border-x-2 border-zinc-700 rounded-xl p-4">
+                {scores[0] != null? scores.map(createLeaderboard) : createLoading()}
             </div>
 
-            <div className='text-left bg-slate-500 p-2 px-8 text-slate-800 border-slate-700 border-b-4 shadow-lg rounded-lg'>
-                <p className='text-slate-300'>There were {scores.length} responses from the server.</p>
-                <p>{JSON.stringify(scores)}</p>
+            <div className="my-5 bg-zinc-600 border-t-4 border-x-2 border-zinc-700 rounded-xl p-4">
+                <p className='text-slate-300'>There were {scores.length} responses from the server. Here is the raw data:</p>
+                <p className="overflow-scroll max-h-96 flex gap-5 justify-evenly text-left bg-slate-500 p-2 my-2 px-8 text-slate-800 border-slate-700 border-b-4 border-t-1 border-t-slate-200 rounded-lg">{JSON.stringify(scores)}</p>
             </div>
         </>
     )
