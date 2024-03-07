@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hogs-background': "url('./hogs-background.png')"
+        'hogs-background': "url('assets/hogs-background.png')"
       }
     },
     fontFamily: {

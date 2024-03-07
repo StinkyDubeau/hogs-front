@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 export default function Leaderboard() {
     const [scores, setScores] = useState([])
-    const [columns, setColumns] = useState(["user_id", "points", "time"]);
 
     useEffect(() => {
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {

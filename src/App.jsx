@@ -1,6 +1,6 @@
 import './App.css'
-import Button from "./assets/components/Button.jsx"
-import Leaderboard from './assets/components/Leaderboard.jsx'
+import Button from "./components/Button.jsx"
+import Leaderboard from './components/Leaderboard.jsx'
 
 function App() {
     return (
