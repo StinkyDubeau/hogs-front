@@ -10,6 +10,9 @@ export default function Leaderboard() {
                 API_KEY: 'this is a very insecure api key',
             }),
             method: "POST",
+            body: JSON.stringify({
+                "rows": 3,
+            })
         })
             .then(response => response.json())
             .then(data => {
