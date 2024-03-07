@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Leaderboard() {
+export default function Leaderboard(props) {
     const [scores, setScores] = useState([])
 
     useEffect(() => {
@@ -45,15 +45,19 @@ export default function Leaderboard() {
     function createLeaderboard(scores) {
         return (
             <table className="table-auto w-full">
-                <tr>
-                    <th>Position</th>
-                    <th>User</th>
-                    <th>Level</th>
-                    <th>Points</th>
-                    <th>Time</th>
-                    <th>Details</th>
-                </tr>
-                {scores.map(createRow)}
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>User</th>
+                        <th>Level</th>
+                        <th>Points</th>
+                        <th>Time</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {scores.map(createRow)}
+                </tbody>
             </table>
         )
     }
