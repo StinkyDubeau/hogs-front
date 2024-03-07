@@ -7,7 +7,7 @@ export default function Polaroid(props) {
             <Link to={props.to}>
                 <div className="bg-slate-100 flex-col p-2 w-60 h-80 shadow-md hover:shadow-xl hover:scale-105 rotate-3 hover:rotate-0 transition-all">
                     <div className="bg-gradient-to-b to-slate-900 from-zinc-700 h-[80%]">
-                        <img className="object-cover" src={props.img}/>
+                        <img className="object-cover h-full" src={props.img} alt={props.alt}/>
                     </div>
                     <p className="text-3xl mt-4 text-slate-700 font-sansui">{props.text}</p>
                 </div >

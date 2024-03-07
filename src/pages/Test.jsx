@@ -9,7 +9,8 @@ export default function Test() {
             <p>This is a test page to sandbox new components and functionality.</p>
             <div className="flex p-10">
                 <Polaroid text="No image" to="/" />
-                <Polaroid text="Leaderboards" to="/test" img="./hogs-background.png"/>
+                <Polaroid text="Four" to="/" img="./test-image-one.jpg" alt="an image of the number four painted on a white brick wall"/>
+                <Polaroid text="Leaderboards" to="/test" img="./hogs-background.png" />
             </div>
             <h1 className='font-tourmaline text-3xl'>Tourmaline</h1>
             <h1 className='font-hogs text-5xl'>H.O.G.S</h1>
