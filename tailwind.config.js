@@ -24,6 +24,8 @@ export default {
       "sansui": ["Josefin Sans", "sans-serif"],
     }
   },
-  plugins: [],
+  plugins: [
+    require('@pyncz/tailwind-mask-image')
+  ],
 }
 
