@@ -70,10 +70,6 @@ export default function Leaderboard(props) {
 
     return (
         <>
-            <div>
-                <p>Choose columns:</p>
-            </div>
-
             <div className="bg-zinc-600 max-h-96 overflow-scroll border-t-4 border-x-2 border-zinc-700 rounded-xl p-4">
                 {scores[0] != null ? createLeaderboard(scores) : createLoading()}
             </div>
