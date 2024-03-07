@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx"
 
 import Test from "./pages/Test.jsx"
 import Home from "./pages/Home.jsx"
+import Community from "./pages/Community.jsx"
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/test" element={<Test />} />
+                    <Route path="/community" element={<Community />} />
                 </Routes>
             </div >
         </>

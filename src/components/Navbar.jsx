@@ -7,6 +7,7 @@ export default function Navbar() {
             <p>Logo</p>
             <Link to="/"><Button text="Home"/></Link>
             <Link to="/test"><Button text="Test"/></Link>
+            <Link to="/community"><Button text="Community"/></Link>
         </div>
     );
 }
