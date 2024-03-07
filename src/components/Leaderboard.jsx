@@ -64,7 +64,10 @@ export default function Leaderboard(props) {
 
     function createLoading() {
         return (
-            <span className="loading loading-spinner loading-md"></span>
+            <div>
+                <span className="loading loading-spinner loading-md"></span>
+                <p>Loading leaderboard...</p>
+            </div>
         )
     }
 
