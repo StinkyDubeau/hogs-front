@@ -15,5 +15,5 @@ export default function Polaroid(props) {
                 </div >
             </Link>
         </div>
-    )
+    );
 }
