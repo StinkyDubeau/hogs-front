@@ -71,7 +71,7 @@ export default function Leaderboard(props) {
 
     return (
         <>
-            <div className="max-h-96 overflow-scroll rounded-xl border-x-2 border-t-4 border-zinc-700 bg-zinc-600 p-4">
+            <div className="max-h-96 overflow-scroll scrollbar-hide rounded-xl border-x-2 border-t-4 border-zinc-700 bg-zinc-600 p-4">
                 {scores[0] != null
                     ? createLeaderboard(scores)
                     : createLoading()}
