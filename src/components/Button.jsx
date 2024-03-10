@@ -9,7 +9,7 @@ export default function Button(props) {
 
         <button className="font-sansui">
             <Glass className={styleString}>
-                <p>{props.text}</p>
+                <p className="mt-0.5">{props.text}</p>
                 {props.children}
             </Glass>
         </button >
