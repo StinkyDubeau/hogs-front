@@ -72,14 +72,10 @@ export default function Leaderboard(props) {
     }
 
     return (
-        <Frame>
-            <Glass className="max-h-96 overflow-scroll scrollbar-hide">
-                <div className="m-h-96 overflow-scroll scrollbar-hide">
-                    {scores[0] != null
-                        ? createLeaderboard(scores)
-                        : createLoading()}
-                </div>
-            </Glass>
-        </Frame>
+        <Glass className="max-h-96 overflow-scroll scrollbar-hide">
+            {scores[0] != null
+                ? createLeaderboard(scores)
+                : createLoading()}
+        </Glass>
     );
 }
