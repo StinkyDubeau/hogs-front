@@ -1,37 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function Leaderboard(props) {
-    const [scores, setScores] = useState([])
+    const [scores, setScores] = useState([]);
 
     useEffect(() => {
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
             headers: new Headers({
-                API_KEY: 'this is a very insecure api key',
+                API_KEY: "this is a very insecure api key",
             }),
             method: "POST",
             body: JSON.stringify({
-                "rows": 3,
-            })
+                rows: 3,
+            }),
         })
-            .then(response => response.json())
-            .then(data => {
+            .then((response) => response.json())
+            .then((data) => {
                 console.log(data);
                 setScores(data);
             })
-            .catch(err => {
-                console.log(err)
-            })
-    }, [])
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
 
     function createRow(score, index) {
         return (
-            <tr className="hover:scale-100 scale-95 transition-all">
+            <tr className="m-2 scale-95 rounded-lg border-slate-700 transition-all hover:scale-100 hover:bg-slate-500 hover:shadow-lg">
                 <td>{index}</td>
                 <td>{score.user_id}</td>
                 <td>{score.level}</td>
                 <td>{score.points}</td>
                 <td>{score.time}</td>
-                <td className="text-right text-xs justify-between text-slate-400">
+                <td className="justify-between text-right text-xs text-slate-400">
                     <div>
                         <p>Gamemode: {score.game_mode}</p>
                         <p>Game version: {score.game_version}</p>
@@ -44,7 +44,7 @@ export default function Leaderboard(props) {
 
     function createLeaderboard(scores) {
         return (
-            <table className="table-auto w-full">
+            <table className="w-full table-auto">
                 <thead className="scale-95">
                     <tr>
                         <th>Position</th>
@@ -55,11 +55,9 @@ export default function Leaderboard(props) {
                         <th>Details</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {scores.map(createRow)}
-                </tbody>
+                <tbody>{scores.map(createRow)}</tbody>
             </table>
-        )
+        );
     }
 
     function createLoading() {
@@ -68,19 +66,26 @@ export default function Leaderboard(props) {
                 <span className="loading loading-spinner loading-md"></span>
                 <p>Loading leaderboard...</p>
             </div>
-        )
+        );
     }
 
     return (
         <>
-            <div className="bg-zinc-600 max-h-96 overflow-scroll border-t-4 border-x-2 border-zinc-700 rounded-xl p-4">
-                {scores[0] != null ? createLeaderboard(scores) : createLoading()}
+            <div className="max-h-96 overflow-scroll rounded-xl border-x-2 border-t-4 border-zinc-700 bg-zinc-600 p-4">
+                {scores[0] != null
+                    ? createLeaderboard(scores)
+                    : createLoading()}
             </div>
 
-            <div className="my-5 bg-zinc-600 border-t-4 border-x-2 border-zinc-700 rounded-xl p-4">
-                <p className='text-slate-300'>There were {scores.length} responses from the server. Here is the raw data:</p>
-                <p className="overflow-scroll max-h-96 flex gap-5 justify-evenly text-left bg-slate-500 p-2 my-2 px-8 text-slate-800 border-slate-700 border-b-4 border-t-1 border-t-slate-200 rounded-lg">{JSON.stringify(scores)}</p>
+            <div className="my-5 rounded-xl border-x-2 border-t-4 border-zinc-700 bg-zinc-600 p-4">
+                <p className="text-slate-300">
+                    There were {scores.length} responses from the server. Here
+                    is the raw data:
+                </p>
+                <p className="border-t-1 my-2 flex max-h-96 justify-evenly gap-5 overflow-scroll rounded-lg border-b-4 border-slate-700 border-t-slate-200 bg-slate-500 p-2 px-8 text-left text-slate-800">
+                    {JSON.stringify(scores)}
+                </p>
             </div>
         </>
-    )
+    );
 }
