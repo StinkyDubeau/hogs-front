@@ -7,9 +7,9 @@ export default function Navbar() {
     return (
         <Glass>
             <div className="site-logo flex justify-center mb-3">
-                <button>
+                <Link to="/">
                     <img className="hover:scale-110 max-h-12 transition-all" src={Logo} alt="studio logo"/>
-                </button>
+                </Link>
             </div>
             <div className="flex justify-center">
                 <Link to="/">

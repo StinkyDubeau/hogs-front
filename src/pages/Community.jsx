@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import Polaroid from "../components/Polaroid";
-import Corkboard from "../components/Corkboard";
 import Windowlight from "../components/effects/Windowlight";
 
 export default function Community() {
