@@ -19,10 +19,10 @@ export default function Navbar() {
                     <Button text="Test" />
                 </Link>
                 <Link to="/about">
-                    <Button className="bg-zinc-500" text="About*" />
+                    <Button className="bg-zinc-500 hover:bg-zinc-400" text="About*" />
                 </Link>
                 <Link to="/community">
-                    <Button className="bg-zinc-500" text="Community*" />
+                    <Button className="bg-zinc-500 hover:bg-zinc-400" text="Community*" />
                 </Link>
                 <Link to="/leaderboards">
                     <Button text="Leaderboard" />
