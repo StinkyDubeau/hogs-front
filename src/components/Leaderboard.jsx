@@ -25,7 +25,7 @@ export default function Leaderboard(props) {
 
     function createRow(score, index) {
         return (
-            <tr className="">
+            <tr className="hover:scale-100 scale-95 transition-all">
                 <td>{index}</td>
                 <td>{score.user_id}</td>
                 <td>{score.level}</td>
@@ -45,7 +45,7 @@ export default function Leaderboard(props) {
     function createLeaderboard(scores) {
         return (
             <table className="table-auto w-full">
-                <thead>
+                <thead className="scale-95">
                     <tr>
                         <th>Position</th>
                         <th>User</th>
