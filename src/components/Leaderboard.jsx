@@ -70,22 +70,10 @@ export default function Leaderboard(props) {
     }
 
     return (
-        <>
-            <div className="max-h-96 overflow-scroll scrollbar-hide rounded-xl border-x-2 border-t-4 border-zinc-700 bg-zinc-600 p-4">
-                {scores[0] != null
-                    ? createLeaderboard(scores)
-                    : createLoading()}
-            </div>
-
-            <div className="my-5 rounded-xl border-x-2 border-t-4 border-zinc-700 bg-zinc-600 p-4">
-                <p className="text-slate-300">
-                    There were {scores.length} responses from the server. Here
-                    is the raw data:
-                </p>
-                <p className="border-t-1 my-2 flex max-h-96 justify-evenly gap-5 overflow-scroll scrollbar-hide rounded-lg border-b-4 border-slate-700 border-t-slate-200 bg-slate-500 p-2 px-8 text-left text-slate-800">
-                    {JSON.stringify(scores)}
-                </p>
-            </div>
-        </>
+        <div className="flex-1 max-h-96 overflow-scroll scrollbar-hide rounded-xl border border-white border-x-[#ffffff22] border-b-[#ffffff11] border-t-[#ffffff33] p-5 text-slate-200 shadow-lg backdrop-blur-xl">
+            {scores[0] != null
+                ? createLeaderboard(scores)
+                : createLoading()}
+        </div>
     );
 }
