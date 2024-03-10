@@ -12,6 +12,9 @@ export default {
                 "inner-3xl": "inset 0px 0px 50px 25px rgb(0 0 0 / 0.5)",
                 "inner-2xl": "inset 0px 0px 20px 10px rgb(0 0 0 / 0.5)",
             },
+            backdropBlur: {
+                xs: "2px",
+            },
         },
         fontFamily: {
             tourmaline: ["Pixelify Sans", "sans-serif"],

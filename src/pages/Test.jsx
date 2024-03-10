@@ -32,10 +32,15 @@ export default function Test() {
                     <Button text="Button" />
                 </div>
 
-                <div className="flex justify-center">
-                    <Glass className="max-w-36">
-                        <h1>Hello world</h1>
-                        <p>This is in glass</p>
+                <div className="">
+                    <Glass className="top-10 right-4 absolute max-w-36 bg-[#d400ff44]">
+                        <h1>This is some purple-ish glass</h1>
+                    </Glass>
+                    <Glass className="top-32 right-24 absolute max-w-36 bg-[#2ac56544]">
+                        <h1>This is some green-ish glass</h1>
+                    </Glass>
+                    <Glass className="top-4 right-32 absolute max-w-36 bg-[#69696911] backdrop-blur-xs">
+                        <h1>This is some clear-er glass</h1>
                     </Glass>
                 </div>
             </Glass>
