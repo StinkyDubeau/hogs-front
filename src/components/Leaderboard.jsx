@@ -25,7 +25,7 @@ export default function Leaderboard(props) {
 
     function createRow(score, index) {
         return (
-            <tr className="m-2 scale-95 rounded-lg border-slate-700 transition-all hover:scale-100 hover:bg-slate-500 hover:shadow-lg">
+            <tr key={score._id} className="m-2 scale-95 rounded-lg border-slate-700 transition-all hover:scale-100 hover:bg-slate-500 hover:shadow-lg">
                 <td>{index}</td>
                 <td>{score.user_id}</td>
                 <td>{score.level}</td>
@@ -82,7 +82,7 @@ export default function Leaderboard(props) {
                     There were {scores.length} responses from the server. Here
                     is the raw data:
                 </p>
-                <p className="border-t-1 my-2 flex max-h-96 justify-evenly gap-5 overflow-scroll rounded-lg border-b-4 border-slate-700 border-t-slate-200 bg-slate-500 p-2 px-8 text-left text-slate-800">
+                <p className="border-t-1 my-2 flex max-h-96 justify-evenly gap-5 overflow-scroll scrollbar-hide rounded-lg border-b-4 border-slate-700 border-t-slate-200 bg-slate-500 p-2 px-8 text-left text-slate-800">
                     {JSON.stringify(scores)}
                 </p>
             </div>

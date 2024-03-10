@@ -17,6 +17,9 @@ export default function Navbar() {
             <Link to="/community">
                 <Button text="Community" />
             </Link>
+            <Link to="/leaderboards">
+                <Button text="Leaderboard" />
+            </Link>
         </div>
     );
 }

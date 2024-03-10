@@ -6,6 +6,7 @@ import Test from "./pages/Test.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Community from "./pages/Community.jsx";
+import Leaderboards from "./pages/Leaderboards.jsx";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/test" element={<Test />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/community" element={<Community />} />
+                    <Route path="/leaderboards" element={<Leaderboards />} />
                 </Routes>
             </div>
         </>

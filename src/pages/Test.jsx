@@ -31,7 +31,7 @@ export default function Test() {
             <Button text="Click me!" />
             <Button text="Button" />
 
-            <Leaderboard />
+            
         </div>
     );
 }
