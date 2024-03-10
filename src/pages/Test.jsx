@@ -37,13 +37,13 @@ export default function Test() {
                     </div>
 
                     <div className="">
-                        <Glass className="top-10 right-4 absolute max-w-36 bg-[#d400ff44]">
+                        <Glass className="hover:z-50 hover:scale-105 top-10 right-4 absolute max-w-36 bg-[#d400ff44] transition-all">
                             <h1>This is some purple-ish glass</h1>
                         </Glass>
-                        <Glass className="top-32 right-24 absolute max-w-36 bg-[#2ac56544]">
+                        <Glass className="hover:z-50 hover:scale-105 top-32 right-24 absolute max-w-36 bg-[#2ac56544] transition-all">
                             <h1>This is some green-ish glass</h1>
                         </Glass>
-                        <Glass className="top-4 right-32 absolute max-w-36 bg-[#69696911] backdrop-blur-xs">
+                        <Glass className="hover:z-50 hover:scale-105 top-4 right-32 absolute max-w-36 bg-[#69696911] backdrop-blur-xs transition-all">
                             <h1>This is some clear-er glass</h1>
                         </Glass>
                     </div>
