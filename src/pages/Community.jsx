@@ -1,5 +1,6 @@
 import Polaroid from "../components/Polaroid";
 import Windowlight from "../components/effects/Windowlight";
+import Navbar from "../components/Navbar";
 
 export default function Community() {
     return (

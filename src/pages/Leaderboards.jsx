@@ -1,4 +1,5 @@
 import Leaderboard from "../components/Leaderboard";
+import Navbar from "../components/Navbar";
 
 export default function Leaderboards() {
     return (

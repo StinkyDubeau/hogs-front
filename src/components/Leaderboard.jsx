@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Glass from "../components/materials/Glass.jsx"
+import Frame from "../components/Frame.jsx";
 
 export default function Leaderboard(props) {
     const [scores, setScores] = useState([]);
@@ -27,7 +28,7 @@ export default function Leaderboard(props) {
     function createRow(score, index) {
         return (
             <tr key={score._id} className="m-2 scale-95 rounded-lg border-slate-700 transition-all hover:scale-100 hover:bg-slate-500 hover:shadow-lg">
-                <td>{index+1}</td>
+                <td>{index + 1}</td>
                 <td>{score.user_id}</td>
                 <td>{score.level}</td>
                 <td>{score.points}</td>
@@ -71,12 +72,14 @@ export default function Leaderboard(props) {
     }
 
     return (
-        <Glass className="max-h-96 overflow-scroll scrollbar-hide">
-            <div className="m-h-96 overflow-scroll scrollbar-hide">
-                {scores[0] != null
-                    ? createLeaderboard(scores)
-                    : createLoading()}
-            </div>
-        </Glass>
+        <Frame>
+            <Glass className="max-h-96 overflow-scroll scrollbar-hide">
+                <div className="m-h-96 overflow-scroll scrollbar-hide">
+                    {scores[0] != null
+                        ? createLeaderboard(scores)
+                        : createLoading()}
+                </div>
+            </Glass>
+        </Frame>
     );
 }

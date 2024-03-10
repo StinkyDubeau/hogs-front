@@ -11,7 +11,7 @@ export default function Navbar() {
                     <img className="hover:scale-110 max-h-12 transition-all" src={Logo} alt="studio logo"/>
                 </Link>
             </div>
-            <div className="flex justify-center">
+            <div className="flex-wrap justify-center">
                 <Link to="/">
                     <Button text="Home" />
                 </Link>
@@ -19,15 +19,16 @@ export default function Navbar() {
                     <Button text="Test" />
                 </Link>
                 <Link to="/about">
-                    <Button text="About" />
+                    <Button className="bg-zinc-500" text="About*" />
                 </Link>
                 <Link to="/community">
-                    <Button text="Community" />
+                    <Button className="bg-zinc-500" text="Community*" />
                 </Link>
                 <Link to="/leaderboards">
                     <Button text="Leaderboard" />
                 </Link>
             </div>
+            <p className="text-xs text-slate-300">*No navbar</p>
         </Glass>
     );
 }

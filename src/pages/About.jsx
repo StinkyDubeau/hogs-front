@@ -1,10 +1,13 @@
 import ReactPlayer from "react-player";
+import Frame from "../components/Frame";
+import { Link } from "react-router-dom";
 
 export default function About() {
     return (
-        <>
+        <Frame noNavbar>
             <div className="text-slate-200">
                 <p>About page</p>
+                <Link to="/" className="underline text-blue-500">Back to home</Link>
                 <ReactPlayer
                     className="-z-50 mask-radial"
                     url="https://samplelib.com/lib/preview/mp4/sample-20s.mp4"
@@ -27,6 +30,6 @@ export default function About() {
                     via a new interactive medium.
                 </p>
             </div>
-        </>
+        </Frame>
     );
 }

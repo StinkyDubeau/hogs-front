@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Glass from "../components/materials/Glass";
+import Frame from "../components/Frame";
 
 export default function Home() {
     return (
-        <>
+        <Frame>
             <Glass>
                 <h1>Hello! This is the homepage</h1>
                 <p>It's only really here to test multi-page rendering.</p>
@@ -18,6 +19,6 @@ export default function Home() {
                     Take me to the test page
                 </Link>
             </Glass>
-        </>
+        </Frame>
     );
 }
