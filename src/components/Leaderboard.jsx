@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Glass from "../components/materials/Glass.jsx"
 
 export default function Leaderboard(props) {
     const [scores, setScores] = useState([]);
@@ -70,10 +71,12 @@ export default function Leaderboard(props) {
     }
 
     return (
-        <div className="flex-1 max-h-96 overflow-scroll scrollbar-hide rounded-xl border border-white border-x-[#ffffff22] border-b-[#ffffff11] border-t-[#ffffff33] p-5 text-slate-200 shadow-lg backdrop-blur-xl">
-            {scores[0] != null
-                ? createLeaderboard(scores)
-                : createLoading()}
-        </div>
+        <Glass className="max-h-96 overflow-scroll scrollbar-hide">
+            <div className="m-h-96 overflow-scroll scrollbar-hide">
+                {scores[0] != null
+                    ? createLeaderboard(scores)
+                    : createLoading()}
+            </div>
+        </Glass>
     );
 }

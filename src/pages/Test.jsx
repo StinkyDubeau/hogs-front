@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
 import Button from "../components/Button.jsx";
-import Leaderboard from "../components/Leaderboard.jsx";
-import Polaroid from "../components/Polaroid.jsx";
+import Glass from "../components/materials/Glass.jsx";
 
 export default function Test() {
     return (
         <>
-            <div className="rounded-xl border-x border-b-2 border-t-2 border-white border-x-[#ffffff22] border-b-[#00000033] border-t-[#ffffff33] p-5 text-slate-200 shadow-lg backdrop-blur-xl">
+            <Glass>
                 <p>This is a test page to sandbox new components and functions.</p>
 
                 <h1 className="font-tourmaline text-3xl">Tourmaline</h1>
@@ -33,7 +31,14 @@ export default function Test() {
                     <Button text="Click me!" />
                     <Button text="Button" />
                 </div>
-            </div>
+
+                <div className="flex justify-center">
+                    <Glass className="max-w-36">
+                        <h1>Hello world</h1>
+                        <p>This is in glass</p>
+                    </Glass>
+                </div>
+            </Glass>
         </>
     );
 }
