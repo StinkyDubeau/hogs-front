@@ -6,12 +6,11 @@ export default function Button(props) {
     const styleString = `${props.className} ${classString}`;
 
     return (
-
         <button className="font-sansui">
             <Glass className={styleString}>
                 <p className="mt-0.5">{props.text}</p>
                 {props.children}
             </Glass>
-        </button >
+        </button>
     );
 }
