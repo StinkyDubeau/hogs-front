@@ -36,7 +36,7 @@ export default function Test() {
                         <Button text="Button" />
                     </div>
 
-                    <div className="">
+                    <div className="glass-demos">
                         <Glass className="hover:z-50 hover:scale-105 top-10 right-4 absolute max-w-36 bg-[#d400ff44] transition-all">
                             <h1>This is some purple-ish glass</h1>
                         </Glass>
@@ -46,6 +46,22 @@ export default function Test() {
                         <Glass className="hover:z-50 hover:scale-105 top-4 right-32 absolute max-w-36 bg-[#69696911] backdrop-blur-xs transition-all">
                             <h1>This is some clear-er glass</h1>
                         </Glass>
+                    </div>
+
+                    <hr className="border-slate-400 my-4"/>
+
+                    <div>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">What is your name?</span>
+                                <span class="label-text-alt">Top Right label</span>
+                            </div>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                            <div class="label">
+                                <span class="label-text-alt">Bottom Left label</span>
+                                <span class="label-text-alt">Bottom Right label</span>
+                            </div>
+                        </label>
                     </div>
                 </Glass>
             </div>
