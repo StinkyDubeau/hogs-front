@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             backgroundImage: {
-                "hogs-background": "url('assets/hogs-background.png')",
+                "hogs-background": "url('assets/hogs-background.jpg')",
                 cork: "url('assets/cork.jpg')",
             },
             boxShadow: {
