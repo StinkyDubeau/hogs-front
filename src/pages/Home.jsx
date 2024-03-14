@@ -12,7 +12,7 @@ export default function Home() {
         <Frame noNavbar>
             <div className="mt-0 sm:mt-12" />
             <Glass>
-                {/* <CommunityTicker /> */}
+                <CommunityTicker />
                 <div className="relative max-h-[550px] overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
                     <video
                         muted
@@ -39,14 +39,14 @@ export default function Home() {
                         </Button>
                     </div>
                 </div>
+                <p className="mt-8 font-sansui text-2xl text-slate-50">
+                    Scroll to learn more
+                </p>
+                <span className="material-symbols-outlined mt-0 text-4xl text-slate-300">
+                    expand_more
+                </span>
             </Glass>
 
-            <p className="mb-0 font-sansui text-2xl text-slate-50">
-                Scroll to learn more
-            </p>
-            <span className="material-symbols-outlined mt-0 text-4xl text-slate-300">
-                expand_more
-            </span>
             <div className="mt-96" />
 
             <div id="about">

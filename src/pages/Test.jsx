@@ -5,7 +5,7 @@ import CommunityTicker from "../components/CommunityTicker";
 
 export default function Test() {
     return (
-        <Frame>
+        <Frame noCornerNav>
             <Glass>
                 <CommunityTicker />
             </Glass>
