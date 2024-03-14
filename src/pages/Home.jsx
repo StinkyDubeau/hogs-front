@@ -29,8 +29,8 @@ export default function Home() {
             <div className="mt-0 sm:mt-12" />
             <Glass>
                 <CommunityTicker />
-                <div className="relative h-1/2 overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
-                    <video muted autoPlay loop>
+                <div className="relative overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
+                    <video muted autoPlay loop className="min-h-96 object-cover">
                         <source
                             src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_20mb.mp4"
                             type="video/mp4"
@@ -38,7 +38,7 @@ export default function Home() {
                     </video>
                     <div
                         id="CallToAction"
-                        className="absolute inset-32 flex flex-col items-center justify-center"
+                        className="absolute inset-12 flex flex-col items-center justify-center"
                     >
                         <div className="mb-4 drop-shadow-md">
                             <img src={HogsLogo} alt="Hogs Logo" />
