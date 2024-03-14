@@ -20,6 +20,9 @@ export default function Navbar() {
                     <Link to="/">
                         <Button text="Home" />
                     </Link>
+                    <Link to="/news">
+                        <Button text="News" />
+                    </Link>
                     <Link to="/test">
                         <Button text="Test" />
                     </Link>
