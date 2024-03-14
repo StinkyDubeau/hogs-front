@@ -6,11 +6,8 @@ export default function About() {
     return (
         <Frame noNavbar>
             <div className="text-slate-200">
-                <p>About page</p>
-                <Link to="/" className="text-blue-500 underline">
-                    Back to home
-                </Link>
                 <ReactPlayer
+                    playsinline
                     className="-z-50 mask-radial"
                     url="https://samplelib.com/lib/preview/mp4/sample-20s.mp4"
                     playing
