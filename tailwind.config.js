@@ -8,13 +8,22 @@ export default {
                 cork: "url('assets/cork.jpg')",
             },
             boxShadow: {
-                "vignette": "inset 0px 0px 150px 75px rgb(0 0 0 / 0.5)",
+                vignette: "inset 0px 0px 150px 75px rgb(0 0 0 / 0.5)",
                 "inner-4xl": "inset 0px 0px 100px 50px rgb(0 0 0 / 0.5)",
                 "inner-3xl": "inset 0px 0px 50px 25px rgb(0 0 0 / 0.5)",
                 "inner-2xl": "inset 0px 0px 20px 10px rgb(0 0 0 / 0.5)",
             },
             backdropBlur: {
                 xs: "2px",
+            },
+            animation: {
+                "infinite-scroll": "infinite-scroll 25s linear infinite",
+            },
+            keyframes: {
+                "infinite-scroll": {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-100%)" },
+                },
             },
         },
         fontFamily: {
