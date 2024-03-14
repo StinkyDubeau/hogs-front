@@ -1,13 +1,10 @@
-import Button from "../components/Button.jsx";
-import Glass from "../components/materials/Glass.jsx";
-import Navbar from "../components/Navbar";
+import Button from "../components/Button";
+import Glass from "../components/materials/Glass";
+import Frame from "../components/Frame";
 
 export default function Test() {
     return (
-        <>
-            <div className="m-auto max-w-[1280px] p-2 text-center sm:p-6">
-                <Navbar />
-
+            <Frame>
                 <Glass>
                     <p>This is a test page to sandbox new components and functions.</p>
 
@@ -64,7 +61,6 @@ export default function Test() {
                         </label>
                     </div>
                 </Glass>
-            </div>
-        </>
+            </Frame>
     );
 }
