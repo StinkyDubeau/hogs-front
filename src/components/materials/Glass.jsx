@@ -1,7 +1,11 @@
 export default function Button(props) {
-    const glassString =
+    const glassString = 
         "mb-2 rounded-xl border border-x-[#ffffff22] border-b-[#ffffff22] border-t-[#ffffff33] p-5 text-slate-200 shadow-lg backdrop-blur-xl";
-    const styleString = `${props.className} ${glassString}`;
+    let styleString = `${props.className} ${glassString}`;
+
+    if(props.materialOnly) {
+        styleString = `${props.className} border border-x-[#ffffff22] border-b-[#ffffff22] border-t-[#ffffff33] shadow-lg backdrop-blur-xl`;
+    }
 
     return <div className={styleString}>{props.children}</div>;
 }
