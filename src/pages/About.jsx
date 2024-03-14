@@ -8,7 +8,7 @@ export default function About() {
                 <ReactPlayer
                     playsinline
                     className="-z-50 mask-radial"
-                    url="https://samplelib.com/lib/preview/mp4/sample-20s.mp4"
+                    url="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_20mb.mp4"
                     playing
                     muted
                     loop

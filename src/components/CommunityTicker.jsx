@@ -5,7 +5,7 @@ export default function CommunityTicker(props) {
                 Community feed:{" "}
             </h1>
             <div>
-                <h1 className="w-full text-nowrap bg-red-500 font-sansui text-3xl">
+                <h1 className="w-full bg-red-500 font-sansui text-3xl">
                     This is a scrolling ticker. This is a scrolling ticker. This
                     is a scrolling ticker. This is a scrolling ticker.{" "}
                 </h1>
