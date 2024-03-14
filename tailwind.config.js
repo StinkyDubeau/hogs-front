@@ -5,7 +5,7 @@ export default {
         extend: {
             backgroundImage: {
                 "hogs-background": "url('assets/hogs-background.png')",
-                "cork": "url('assets/cork.jpg')",
+                cork: "url('assets/cork.jpg')",
             },
             boxShadow: {
                 "inner-4xl": "inset 0px 0px 100px 50px rgb(0 0 0 / 0.5)",

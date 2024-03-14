@@ -1,23 +1,39 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import Glass from "../components/materials/Glass"
+import Glass from "../components/materials/Glass";
 
 export default function CornerNav(props) {
     return (
-        <div className="fixed top-1 left-1.5">
+        <div className="fixed left-1.5 top-1">
             <Glass className="p-0">
-                <div className="flex mt-0.5 mx-0.5">
+                <div className="mx-0.5 mt-0.5 flex">
                     <Link to="/">
-                        <Button className="h-12 w-12 p-0 ml-1.5 rounded-[8px]"><span className="mt-1 material-symbols-outlined">home</span></Button>
+                        <Button className="ml-1.5 h-12 w-12 rounded-[8px] p-0">
+                            <span className="material-symbols-outlined mt-1">
+                                home
+                            </span>
+                        </Button>
                     </Link>
                     <Link to="community">
-                        <Button className="h-12 w-12 p-0"><span className="mt-1 material-symbols-outlined">communities</span></Button>
+                        <Button className="h-12 w-12 p-0">
+                            <span className="material-symbols-outlined mt-1">
+                                communities
+                            </span>
+                        </Button>
                     </Link>
                     <Link to="news">
-                        <Button className="h-12 w-12 p-0"><span className="mt-1 material-symbols-outlined">news</span></Button>
+                        <Button className="h-12 w-12 p-0">
+                            <span className="material-symbols-outlined mt-1">
+                                news
+                            </span>
+                        </Button>
                     </Link>
                     <Link to="About">
-                        <Button className="h-12 w-12 p-0"><span className="mt-1 material-symbols-outlined">help</span></Button>
+                        <Button className="h-12 w-12 p-0">
+                            <span className="material-symbols-outlined mt-1">
+                                help
+                            </span>
+                        </Button>
                     </Link>
                 </div>
             </Glass>

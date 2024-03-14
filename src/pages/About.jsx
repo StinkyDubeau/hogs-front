@@ -7,7 +7,9 @@ export default function About() {
         <Frame noNavbar>
             <div className="text-slate-200">
                 <p>About page</p>
-                <Link to="/" className="underline text-blue-500">Back to home</Link>
+                <Link to="/" className="text-blue-500 underline">
+                    Back to home
+                </Link>
                 <ReactPlayer
                     className="-z-50 mask-radial"
                     url="https://samplelib.com/lib/preview/mp4/sample-20s.mp4"
