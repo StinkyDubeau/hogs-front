@@ -4,7 +4,7 @@ import Glass from "../components/materials/Glass";
 ``;
 export default function CornerNav(props) {
     return (
-        <div className="fixed left-1.5 top-1 z-50">
+        <div className="fixed bottom-0 left-0 z-50 w-screen m-0 bg-center sm:left-1.5 sm:top-1 sm:w-auto">
             <Glass materialOnly className="rounded-xl">
                 <div className="">
                     <Link className="" to="/">

@@ -26,8 +26,8 @@ export default function Home() {
 
     return (
         <Frame noNavbar>
-            <div className="">
-                <div className="mt-12" />
+            <div className="mt-0 sm:mt-12" />
+            <Glass>
                 <CommunityTicker />
                 <div className="relative h-1/2 overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
                     <video muted autoPlay loop>
@@ -50,17 +50,16 @@ export default function Home() {
                         </Button>
                     </div>
                 </div>
+            </Glass>
 
-            </div>
-                            
             <div className="mb-32" />
-                <p className="mb-0 font-sansui text-2xl text-slate-50">
-                    Scroll to learn more
-                </p>
-                <span className=" material-symbols-outlined mt-0 text-4xl text-slate-300">
-                    expand_more
-                </span>
-                <div className="mt-96" />
+            <p className="mb-0 font-sansui text-2xl text-slate-50">
+                Scroll to learn more
+            </p>
+            <span className=" material-symbols-outlined mt-0 text-4xl text-slate-300">
+                expand_more
+            </span>
+            <div className="mt-96" />
 
             <div id="about">
                 <p>About page</p>
