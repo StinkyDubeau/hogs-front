@@ -1,10 +1,14 @@
 import Button from "../components/Button";
 import Glass from "../components/materials/Glass";
 import Frame from "../components/Frame";
+import CommunityTicker from "../components/CommunityTicker";
 
 export default function Test() {
     return (
         <Frame>
+            <Glass>
+                <CommunityTicker />
+            </Glass>
             <Glass>
                 <p>
                     This is a test page to sandbox new components and functions.
@@ -50,21 +54,21 @@ export default function Test() {
                 <hr className="my-4 border-slate-400" />
 
                 <div>
-                    <label class="form-control w-full max-w-xs">
-                        <div class="label">
-                            <span class="label-text">What is your name?</span>
-                            <span class="label-text-alt">Top Right label</span>
+                    <label className="form-control w-full max-w-xs">
+                        <div className="label">
+                            <span className="label-text">What is your name?</span>
+                            <span className="label-text-alt">Top Right label</span>
                         </div>
                         <input
                             type="text"
                             placeholder="Type here"
-                            class="input input-bordered w-full max-w-xs"
+                            className="input input-bordered w-full max-w-xs"
                         />
-                        <div class="label">
-                            <span class="label-text-alt">
+                        <div className="label">
+                            <span className="label-text-alt">
                                 Bottom Left label
                             </span>
-                            <span class="label-text-alt">
+                            <span className="label-text-alt">
                                 Bottom Right label
                             </span>
                         </div>

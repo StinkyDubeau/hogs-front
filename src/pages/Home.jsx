@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Glass from "../components/materials/Glass";
 import Frame from "../components/Frame";
 import About from "./About";
@@ -7,30 +8,18 @@ import HogsLogo from "../assets/HOGS logo.png";
 import Button from "../components/Button";
 
 export default function Home() {
-    function useIsVisible(ref) {
-        const [isIntersecting, setIntersecting] = useState(false);
-
-        useEffect(() => {
-            const observer = new IntersectionObserver(([entry]) => {
-                setIntersecting(entry.isIntersecting);
-            });
-
-            observer.observe(ref.current);
-            return () => {
-                observer.disconnect();
-            };
-        }, [ref]);
-
-        return isIntersecting;
-    }
-
     return (
         <Frame noNavbar>
             <div className="mt-0 sm:mt-12" />
             <Glass>
-                <CommunityTicker />
-                <div className="relative overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
-                    <video muted autoPlay loop className="min-h-96 object-cover">
+                {/* <CommunityTicker /> */}
+                <div className="relative max-h-[550px] overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
+                    <video
+                        muted
+                        autoPlay
+                        loop
+                        className="min-h-96 object-cover"
+                    >
                         <source
                             src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_20mb.mp4"
                             type="video/mp4"
@@ -43,7 +32,7 @@ export default function Home() {
                         <div className="mb-4 drop-shadow-md">
                             <img src={HogsLogo} alt="Hogs Logo" />
                         </div>
-                        <Button>
+                        <Button className="bg-[#a53b8e81] hover:scale-125 hover:bg-[#a53b8e]">
                             <p className="text-2xl text-slate-200">
                                 Wishlist now
                             </p>
@@ -52,11 +41,10 @@ export default function Home() {
                 </div>
             </Glass>
 
-            <div className="mb-32" />
             <p className="mb-0 font-sansui text-2xl text-slate-50">
                 Scroll to learn more
             </p>
-            <span className=" material-symbols-outlined mt-0 text-4xl text-slate-300">
+            <span className="material-symbols-outlined mt-0 text-4xl text-slate-300">
                 expand_more
             </span>
             <div className="mt-96" />
