@@ -15,7 +15,7 @@ export default function CornerNav(props) {
                         </Button>
                     </Link>
 
-                    <Link className="" to="community">
+                    <Link className="" to="/community">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
                                 communities
@@ -23,7 +23,7 @@ export default function CornerNav(props) {
                         </Button>
                     </Link>
 
-                    <Link className="" to="news">
+                    <Link className="" to="/news">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
                                 news
@@ -31,7 +31,7 @@ export default function CornerNav(props) {
                         </Button>
                     </Link>
 
-                    <Link className="" to="About">
+                    <Link className="" to="/about">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
                                 help
