@@ -5,7 +5,7 @@ import Button from "../components/Button";
 
 export default function Leaderboards() {
     return (
-        <Frame>
+        <Frame noCornerNav>
             <div className="flex-wrap gap-2 md:flex">
                 <Glass className="">
                     <div className="flex justify-center gap-2 md:max-w-xs md:flex-col">
