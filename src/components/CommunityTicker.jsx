@@ -29,7 +29,7 @@ export default function CommunityTicker(props) {
 
     function createScore(score, index) {
         return (
-            <p key={index} className="font-sansui p-0 m-0 text-3xl">
+            <p key={index} className="m-0 p-0 font-sansui text-3xl">
                 {`${score.user_id} got ${score.points} points on ${score.level}.`}
             </p>
         );
@@ -40,7 +40,9 @@ export default function CommunityTicker(props) {
 
         return (
             <>
-                <Marquee speed="150" className="mt-5">{scores.map(createScore)}</Marquee>
+                <Marquee speed="150" className="mt-6">
+                    {scores.map(createScore)}
+                </Marquee>
             </>
         );
     }
@@ -49,7 +51,7 @@ export default function CommunityTicker(props) {
         console.log("Render loading screen");
 
         return (
-            <div className="w-full">
+            <div className="mt-8 w-full">
                 <span className="loading loading-dots loading-sm"></span>
             </div>
         );
@@ -58,13 +60,16 @@ export default function CommunityTicker(props) {
     return (
         <div className="flex h-20 justify-between">
             <div className="flex flex-col justify-center">
-                <p className="text-center text-slate-200 font-sansui text-3xl">
+                <p className="text-center font-sansui text-3xl text-slate-200">
                     Latest scores:
                 </p>
             </div>
-            <Glass materialOnly className=" rounded-xl w-[80%] border-x-slate-800 border-b-slate-800 border-t-slate-800 shadow-inner-2xl">
+            <div
+                materialOnly
+                className="w-[80%] rounded-xl border border-x-slate-800 border-y-slate-800 shadow-inner-2xl "
+            >
                 {scores ? createMarquee() : createLoading()}
-            </Glass>
+            </div>
         </div>
     );
 }
