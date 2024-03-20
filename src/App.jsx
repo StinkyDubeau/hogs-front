@@ -1,36 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar.jsx";
 
-function App () {
-  const [count, setCount] = useState(0)
+import Test from "./pages/Test.jsx";
+import Home from "./pages/Home.jsx";
+import News from "./pages/News.jsx";
+import About from "./pages/About.jsx";
+import Community from "./pages/Community.jsx";
+import Leaderboards from "./pages/Leaderboards.jsx";
 
-  return (
-    <>
-      <h1 className='font-tourmaline text-3xl'>Tourmaline</h1>
-      <h1 className='font-hogs text-5xl'>H.O.G.S</h1>
-      <p className='font-ipsum text-xs text-justify'>
-        Here is some lorum ipsum text. Blah blah pepsi coke hooray! This is a
-        sentence. Here is some lorum ipsum text. Blah blah pepsi coke hooray!
-        This is a sentence. Here is some lorum ipsum text. Blah blah pepsi coke
-        hooray! This is a sentence. Here is some lorum ipsum text. Blah blah
-        pepsi coke hooray! This is a sentence. Here is some lorum ipsum text.
-        Blah blah pepsi coke hooray! This is a sentence. Here is some lorum
-        ipsum text. Blah blah pepsi coke hooray! This is a sentence. Here is
-        some lorum ipsum text. Blah blah pepsi coke hooray! This is a sentence.
-        Here is some lorum ipsum text. Blah blah pepsi coke hooray! This is a
-        sentence. Here is some lorum ipsum text. Blah blah pepsi coke hooray!
-        This is a sentence. Here is some lorum ipsum text. Blah blah pepsi coke
-        hooray! This is a sentence. Here is some lorum ipsum text. Blah blah
-        pepsi coke hooray! This is a sentence.
-      </p>
-      <button className='font-sansui bg-red-500 p-2 rounded-lg border-solid hover:bg-red-600 '>Click me</button>
-      <button class='font-sansui bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-        Button
-      </button>
-    </>
-  )
+function App() {
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/test" element={<Test />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/leaderboards" element={<Leaderboards />} />
+            </Routes>
+        </>
+    );
 }
 
-export default App
+export default App;
