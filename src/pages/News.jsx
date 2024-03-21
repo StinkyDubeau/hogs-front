@@ -1,7 +1,7 @@
 import Frame from "../components/Frame";
 import Button from "../components/Button";
 import { useState, useEffect } from "react";
-import Glass from "../components/materials/Glass"
+import Glass from "../components/materials/Glass";
 
 export default function News(props) {
     const [posts, setPosts] = useState([]);
@@ -45,7 +45,9 @@ export default function News(props) {
                 <p className="text-left font-sansui text-3xl">{post.title}</p>
                 <p className="text-left font-sansui text-xl">{post.author}</p>
                 <p className="text-left font-sansui text-lg">{post.body}</p>
-                <p className="text-right font-sansui text-xs text-slate-400">id: {post._id}</p>
+                <p className="text-right font-sansui text-xs text-slate-400">
+                    id: {post._id}
+                </p>
             </>
         );
     }
@@ -53,12 +55,14 @@ export default function News(props) {
     function createNewsFeed() {
         return (
             <>
-                <div className="flex gap-2 justify-center">
-                    <Glass className="flex-0 p-4">
+                <div className="flex flex-col-reverse justify-center gap-2  md:flex-initial md:flex">
+                    <Glass className="p-4">
                         {/* <p className="font-sansui text-3xl">Posts</p> */}
-                        <ul className="flex flex-col gap-2">{posts.map(createFeedItem)}</ul>
+                        <ul className="flex flex-col gap-2">
+                            {posts.map(createFeedItem)}
+                        </ul>
                     </Glass>
-                    <Glass className="flex-1 p-4">
+                    <Glass className="p-4">
                         {/* <p className="font-sansui text-3xl">Selected Post</p> */}
                         {createPost()}
                     </Glass>
@@ -80,7 +84,7 @@ export default function News(props) {
         <Frame noNavbar>
             {/* Only render news component if there's something loaded. */}
             {/* TODO: Load the CRT regardless of actual state. */}
-            <div className="mt-12">
+            <div className="sm:mt-12 mt-2">
                 {posts[0] ? createNewsFeed() : createLoading()}
             </div>
         </Frame>
