@@ -51,7 +51,7 @@ export default function Leaderboards() {
 
                     <Glass className="h-full bg-zinc-800 px-8">
                         <div className="flex justify-between gap-4">
-                            <p>Show cheaters</p>
+                            <p className="font-sansui">Show cheaters</p>
                             <input
                                 type="checkbox"
                                 checked={showCheaters && "checked"}
@@ -64,7 +64,7 @@ export default function Leaderboards() {
                             />
                         </div>
                         <div className="mt-2 flex justify-between gap-4">
-                            <p>Show old versions</p>
+                            <p className="font-sansui">Show old versions</p>
                             <input
                                 type="checkbox"
                                 checked={showOld && "checked"}

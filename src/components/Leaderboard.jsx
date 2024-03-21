@@ -34,10 +34,9 @@ export default function Leaderboard(props) {
         let primer = parseInt();
         let reverse = true;
 
-        if(props.sort_by === "time"){
+        if (props.sort_by === "time") {
             reverse = false;
         }
-
 
         const key = primer
             ? function (x) {
@@ -60,12 +59,12 @@ export default function Leaderboard(props) {
                 key={score._id}
                 className="m-2 scale-95 rounded-lg border-slate-700 transition-all hover:scale-100 hover:bg-slate-500 hover:shadow-lg"
             >
-                <td>{index + 1}</td>
-                <td>{score.user_id}</td>
-                <td>{score.level}</td>
-                <td>{score.points}</td>
-                <td>{score.time/1000} seconds</td>
-                <td className="justify-between text-right text-xs text-slate-400">
+                <td className="font-sansui">{index + 1}</td>
+                <td className="font-sansui">{score.user_id}</td>
+                <td className="font-sansui">{score.level}</td>
+                <td className="font-sansui">{score.points}</td>
+                <td className="font-sansui">{score.time / 1000} seconds</td>
+                <td className="justify-between text-right font-sansui text-xs text-slate-400">
                     <div>
                         <p>Gamemode: {score.game_mode}</p>
                         <p>Game version: {score.game_version}</p>
@@ -76,19 +75,17 @@ export default function Leaderboard(props) {
         );
     }
 
-
-
     function createLeaderboard(scores) {
         return (
             <table className="w-full table-auto">
                 <thead className="scale-95">
                     <tr>
-                        <th>Position</th>
-                        <th>User</th>
-                        <th>Level</th>
-                        <th>Points</th>
-                        <th>Time</th>
-                        <th>Details</th>
+                        <th className="font-sansui">Position</th>
+                        <th className="font-sansui">User</th>
+                        <th className="font-sansui">Level</th>
+                        <th className="font-sansui">Points</th>
+                        <th className="font-sansui">Time</th>
+                        <th className="font-sansui">Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,7 +93,7 @@ export default function Leaderboard(props) {
                         // Sort by selected option, else sort by points
                         .sort(
                             sortLeaderboard(
-                                props.sort_by ? props.sort_by : "points"
+                                props.sort_by ? props.sort_by : "points",
                             ),
                         )
                         .map(createRow)}
