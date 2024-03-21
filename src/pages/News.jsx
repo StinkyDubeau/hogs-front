@@ -1,6 +1,7 @@
 import Frame from "../components/Frame";
 import Button from "../components/Button";
 import { useState, useEffect } from "react";
+import Glass from "../components/materials/Glass"
 
 export default function News(props) {
     const [posts, setPosts] = useState([]);
@@ -30,12 +31,7 @@ export default function News(props) {
     function createFeedItem(post, index) {
         return (
             <div key={index}>
-                <Button
-                    onClick={() => {
-                        console.log(index);
-                        setSelection(index);
-                    }}
-                >
+                <Button className="w-56" onClick={() => setSelection(index)}>
                     <p>{post.title}</p>
                 </Button>
             </div>
@@ -57,15 +53,15 @@ export default function News(props) {
     function createNewsFeed() {
         return (
             <>
-                <div className="flex border-2 border-slate-200">
-                    <div className="flex-0 border-2 border-slate-200 p-4">
-                        <p className="font-sansui text-3xl">Posts</p>
-                        <ul>{posts.map(createFeedItem)}</ul>
-                    </div>
-                    <div className="flex-1 border-2 border-slate-200 p-4">
-                        <p className="font-sansui text-3xl">Selected Post</p>
+                <div className="flex gap-2 justify-center">
+                    <Glass className="flex-0 p-4">
+                        {/* <p className="font-sansui text-3xl">Posts</p> */}
+                        <ul className="flex flex-col gap-2">{posts.map(createFeedItem)}</ul>
+                    </Glass>
+                    <Glass className="flex-1 p-4">
+                        {/* <p className="font-sansui text-3xl">Selected Post</p> */}
                         {createPost()}
-                    </div>
+                    </Glass>
                 </div>
             </>
         );
