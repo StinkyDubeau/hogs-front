@@ -31,10 +31,22 @@ export default function Leaderboards() {
     function createSummary() {
         return (
             <ul>
-                <li className="flex justify-between"><p>Sort by:</p><p>{sortBy}</p></li>
-                <li className="flex justify-between"><p>Filter user:</p><p>{userid}</p></li>
-                <li className="flex justify-between"><p>Filter level:</p><p>{level}</p></li>
-                <li className="flex justify-between"><p>Query no:</p><p>{trigger}</p></li>
+                <li className="flex justify-between">
+                    <p>Sort by:</p>
+                    <p>{sortBy}</p>
+                </li>
+                <li className="flex justify-between">
+                    <p>Filter user:</p>
+                    <p>{userid}</p>
+                </li>
+                <li className="flex justify-between">
+                    <p>Filter level:</p>
+                    <p>{level}</p>
+                </li>
+                <li className="flex justify-between">
+                    <p>Query no:</p>
+                    <p>{trigger}</p>
+                </li>
             </ul>
         );
     }
@@ -43,10 +55,12 @@ export default function Leaderboards() {
         if (showAdvanced) {
             return (
                 <Glass className="p-6">
-                    <p className="font-sansui text-2xl mb-2">Advanced Search</p>
+                    <p className="mb-2 font-sansui text-2xl">Advanced Search</p>
                     <Glass className="bg-zinc-800">
                         <p className="font-sansui text-xl">Active params:</p>
-                        <p className="font-sansui text-left">{createSummary()}</p>
+                        <p className="text-left font-sansui">
+                            {createSummary()}
+                        </p>
                     </Glass>
 
                     <Glass className="h-full bg-zinc-800 px-8">
@@ -60,7 +74,7 @@ export default function Leaderboards() {
                                         ? setShowCheaters(!e.target.value)
                                         : setShowCheaters(e.target.value)
                                 }
-                                className="checkbox"
+                                className="checkbox border-slate-400"
                             />
                         </div>
                         <div className="mt-2 flex justify-between gap-4">
@@ -73,7 +87,7 @@ export default function Leaderboards() {
                                         ? setShowOld(!e.target.value)
                                         : setShowOld(e.target.value)
                                 }
-                                className="checkbox"
+                                className="checkbox border-slate-400"
                             />
                         </div>
                     </Glass>
@@ -91,7 +105,7 @@ export default function Leaderboards() {
             return (
                 <div onClick={handleClickAdvanced}>
                     <Button
-                        className="bg-zinc-800 hover:bg-zinc-700 text-slate-300"
+                        className="bg-zinc-800 text-slate-300 hover:bg-zinc-700"
                         text="Show advanced"
                     />
                 </div>
