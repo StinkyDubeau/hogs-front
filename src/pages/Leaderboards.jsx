@@ -1,9 +1,15 @@
+import { useState } from "react";
 import Leaderboard from "../components/Leaderboard";
 import Frame from "../components/Frame";
 import Glass from "../components/materials/Glass";
 import Button from "../components/Button";
 
 export default function Leaderboards() {
+    const [sortUser, setSortUser] = useState(null);
+    const [sortLevel, setSortLevel] = useState("");
+    const [sortMode, setSortMode] = useState("");
+    const [sortVersion, setSortVersion] = useState("");
+
     return (
         <Frame noCornerNav>
             <div className="flex-wrap gap-2 md:flex">

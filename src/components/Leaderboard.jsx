@@ -5,14 +5,19 @@ import Frame from "../components/Frame.jsx";
 export default function Leaderboard(props) {
     const [scores, setScores] = useState([]);
 
+    
+
     useEffect(() => {
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
+            method: "POST",
             headers: new Headers({
                 API_KEY: "this is a very insecure api key",
+                'Content-Type': 'application/json',
             }),
-            method: "POST",
             body: JSON.stringify({
                 rows: 3,
+                user_id: props.user_id,
+
             }),
         })
             .then((response) => response.json())
