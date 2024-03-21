@@ -6,6 +6,7 @@ export default function Leaderboard(props) {
     const [scores, setScores] = useState([]);
 
     useEffect(() => {
+        setScores([])
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
             method: "POST",
             headers: new Headers({
@@ -15,9 +16,9 @@ export default function Leaderboard(props) {
             body: JSON.stringify({
                 rows: 50,
                 user_id: props.user_id === "" ? null : props.user_id,
-                level: props.level,
-                game_mode: props.game_mode,
-                game_version: props.game_version,
+                level: props.level === "" ? null : props.level,
+                game_mode: props.game_mode === "" ? null : props.game_mode,
+                game_version: props.game_version === "" ? null : props.game_version,
             }),
         })
             .then((response) => response.json())

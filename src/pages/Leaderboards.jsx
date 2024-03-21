@@ -10,15 +10,19 @@ export default function Leaderboards() {
     const [sortMode, setSortMode] = useState("points");
     const [sortVersion, setSortVersion] = useState("");
 
-    const [refresh, setRefresh] = useState(false);
+    const [trigger, setTrigger] = useState(0);
 
     const [showAdvanced, setShowAdvanced] = useState(false);
 
     function createSummary() {
         return (
-            <i>
-                Showing {sortUser}'s scores on {sortLevel} sorted by {sortMode}
-            </i>
+            <ul>
+                <p>Sort by: {sortMode}</p>
+                <p>Filter user: {sortUser}</p>
+                <p>Filter level: {sortLevel}</p>
+                <p>Sort by: {sortMode}</p>
+                <p>Sort by: {sortMode}</p>
+            </ul>
         );
     }
 
@@ -27,14 +31,29 @@ export default function Leaderboards() {
             return (
                 <Glass className="p-6">
                     <p className="mb-4">{createSummary()}</p>
-                    <div className="flex justify-center gap-4">
-                        <p>Allow cheats and sandbox</p>
-                        <input
-                            type="checkbox"
-                            checked="checked"
-                            className="checkbox"
-                        />
-                    </div>
+
+                    <Glass className="input input-bordered px-8 h-full">
+                        <span className="material-symbols-outlined text-slate-300">
+                            swap_vert
+                        </span>
+                        <div className="flex justify-between gap-4">
+                            <p>Show cheaters</p>
+                            <input
+                                type="checkbox"
+                                checked="checked"
+                                className="checkbox"
+                            />
+                        </div>
+                        <div className="flex justify-between gap-4">
+                            <p>Show old versions</p>
+                            <input
+                                type="checkbox"
+                                checked="checked"
+                                className="checkbox"
+                            />
+                        </div>
+                    </Glass>
+
                     <div onClick={handleClickAdvanced}>
                         <Button text="Close"></Button>
                     </div>
@@ -51,7 +70,7 @@ export default function Leaderboards() {
 
     function handleSearch() {
         console.log("Refreshing results.");
-        setRefresh(true);
+        setTrigger(trigger + 1);
     }
 
     return (
@@ -126,7 +145,7 @@ export default function Leaderboards() {
                 </div>
                 {/* Assign a max-h-96 value here to cap the height of the leaderboard */}
                 <Glass className="scrollbar-hide flex-1 overflow-scroll">
-                    <Leaderboard refresh={refresh} user_id={sortUser}/>
+                    <Leaderboard refresh={trigger} user_id={sortUser} />
                 </Glass>
             </div>
         </Frame>
