@@ -116,7 +116,7 @@ export default function Leaderboards() {
                                         type="text"
                                         placeholder="User"
                                         value={userid}
-                                        className="input input-bordered my-2 w-full max-w-xs rounded-xl p-5"
+                                        className="bg-zinc-900 border-zinc-700 border h-12 my-2 w-full max-w-xs rounded-xl p-5"
                                         onChange={(e) =>
                                             setUserid(e.target.value)
                                         }
@@ -125,7 +125,7 @@ export default function Leaderboards() {
                                         type="text"
                                         placeholder="Level"
                                         value={level}
-                                        className="input input-bordered w-full max-w-xs rounded-xl p-5"
+                                        className="bg-zinc-900 border-zinc-700 border h-12 w-full max-w-xs rounded-xl p-5"
                                         onChange={(e) =>
                                             sortLevel(e.target.value)
                                         }

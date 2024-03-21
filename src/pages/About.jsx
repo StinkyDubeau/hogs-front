@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function About() {
     return (
+        <Frame noNavbar>
             <div className="text-slate-200">
                 <ReactPlayer
                     playsinline
@@ -28,5 +29,6 @@ export default function About() {
                     via a new interactive medium.
                 </p>
             </div>
+        </Frame>
     );
 }
