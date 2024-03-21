@@ -33,7 +33,7 @@ export default function Leaderboards() {
                 <Glass className="p-6">
                     <p className="mb-4">{createSummary()}</p>
 
-                    <Glass className="input input-bordered px-8 h-full">
+                    <Glass className="input input-bordered h-full px-8">
                         <span className="material-symbols-outlined text-slate-300">
                             swap_vert
                         </span>
@@ -89,18 +89,14 @@ export default function Leaderboards() {
                                     placeholder="User"
                                     value={userid}
                                     className="input input-bordered my-2 w-full max-w-xs rounded-xl p-5"
-                                    onChange={(e) =>
-                                        setUserid(e.target.value)
-                                    }
+                                    onChange={(e) => setUserid(e.target.value)}
                                 />
                                 <input
                                     type="text"
                                     placeholder="Level"
                                     value={level}
                                     className="input input-bordered w-full max-w-xs rounded-xl p-5"
-                                    onChange={(e) =>
-                                        sortLevel(e.target.value)
-                                    }
+                                    onChange={(e) => sortLevel(e.target.value)}
                                 />
                             </div>
 
@@ -114,8 +110,7 @@ export default function Leaderboards() {
                                         type="radio"
                                         name="radio-10"
                                         className="radio checked:bg-slate-400"
-                                        checked
-                                        onClick={() => setGamemode("points")}
+                                        onClick={() => setSortBy("points")}
                                     />
                                 </div>
                                 <div className="my-2 flex justify-between">
@@ -124,7 +119,7 @@ export default function Leaderboards() {
                                         type="radio"
                                         name="radio-10"
                                         className="radio checked:bg-slate-400"
-                                        onClick={() => setGamemode("points")}
+                                        onClick={() => setSortBy("time")}
                                     />
                                 </div>
                             </Glass>
@@ -146,7 +141,13 @@ export default function Leaderboards() {
                 </div>
                 {/* Assign a max-h-96 value here to cap the height of the leaderboard */}
                 <Glass className="scrollbar-hide flex-1 overflow-scroll">
-                    <Leaderboard refresh={trigger} user_id={userid} level={level} game_mode={gamemode} />
+                    <Leaderboard
+                        refresh={trigger}
+                        user_id={userid}
+                        level={level}
+                        game_mode={gamemode}
+                        sort_by={sortBy}
+                    />
                 </Glass>
             </div>
         </Frame>

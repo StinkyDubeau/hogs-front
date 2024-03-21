@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import Glass from "../components/materials/Glass.jsx";
-import Frame from "../components/Frame.jsx";
 
 export default function Leaderboard(props) {
     const [scores, setScores] = useState([]);
 
     useEffect(() => {
-        setScores([])
+        setScores([]);
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
             method: "POST",
             headers: new Headers({
@@ -18,7 +16,8 @@ export default function Leaderboard(props) {
                 user_id: props.user_id === "" ? null : props.user_id,
                 level: props.level === "" ? null : props.level,
                 game_mode: props.game_mode === "" ? null : props.game_mode,
-                game_version: props.game_version === "" ? null : props.game_version,
+                game_version:
+                    props.game_version === "" ? null : props.game_version,
             }),
         })
             .then((response) => response.json())
@@ -53,6 +52,31 @@ export default function Leaderboard(props) {
         );
     }
 
+    const sortLeaderboard = (field) => {
+        let reverse = () => {
+            if(props.sort_by === "time"){
+                return false;
+            } else {
+                return true;
+            }
+        };
+        const primer = parseInt();
+
+        const key = primer
+            ? function (x) {
+                  return primer(x[field]);
+              }
+            : function (x) {
+                  return x[field];
+              };
+
+        reverse = !reverse ? 1 : -1;
+
+        return function (a, b) {
+            return (a = key(a)), (b = key(b)), reverse * ((a > b) - (b > a));
+        };
+    };
+
     function createLeaderboard(scores) {
         return (
             <table className="w-full table-auto">
@@ -66,7 +90,16 @@ export default function Leaderboard(props) {
                         <th>Details</th>
                     </tr>
                 </thead>
-                <tbody>{scores.map(createRow)}</tbody>
+                <tbody>
+                    {scores
+                        // Sort by selected option, else sort by points
+                        .sort(
+                            sortLeaderboard(
+                                props.sort_by ? props.sort_by : "points"
+                            ),
+                        )
+                        .map(createRow)}
+                </tbody>
             </table>
         );
     }
