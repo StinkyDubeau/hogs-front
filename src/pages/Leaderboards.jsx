@@ -5,10 +5,11 @@ import Glass from "../components/materials/Glass";
 import Button from "../components/Button";
 
 export default function Leaderboards() {
-    const [sortUser, setSortUser] = useState("");
-    const [sortLevel, setSortLevel] = useState("");
-    const [sortMode, setSortMode] = useState("points");
-    const [sortVersion, setSortVersion] = useState("");
+    const [userid, setUserid] = useState("");
+    const [level, sortLevel] = useState("");
+    const [gamemode, setGamemode] = useState("");
+    const [gameversion, setGameversion] = useState("");
+    const [sortBy, setSortBy] = useState("");
 
     const [trigger, setTrigger] = useState(0);
 
@@ -17,11 +18,11 @@ export default function Leaderboards() {
     function createSummary() {
         return (
             <ul>
-                <p>Sort by: {sortMode}</p>
-                <p>Filter user: {sortUser}</p>
-                <p>Filter level: {sortLevel}</p>
-                <p>Sort by: {sortMode}</p>
-                <p>Sort by: {sortMode}</p>
+                <p>Sort by: {gamemode}</p>
+                <p>Filter user: {userid}</p>
+                <p>Filter level: {level}</p>
+                <p>Sort by: {gamemode}</p>
+                <p>Sort by: {gamemode}</p>
             </ul>
         );
     }
@@ -86,19 +87,19 @@ export default function Leaderboards() {
                                 <input
                                     type="text"
                                     placeholder="User"
-                                    value={sortUser}
+                                    value={userid}
                                     className="input input-bordered my-2 w-full max-w-xs rounded-xl p-5"
                                     onChange={(e) =>
-                                        setSortUser(e.target.value)
+                                        setUserid(e.target.value)
                                     }
                                 />
                                 <input
                                     type="text"
                                     placeholder="Level"
-                                    value={sortLevel}
+                                    value={level}
                                     className="input input-bordered w-full max-w-xs rounded-xl p-5"
                                     onChange={(e) =>
-                                        setSortLevel(e.target.value)
+                                        sortLevel(e.target.value)
                                     }
                                 />
                             </div>
@@ -114,7 +115,7 @@ export default function Leaderboards() {
                                         name="radio-10"
                                         className="radio checked:bg-slate-400"
                                         checked
-                                        onClick={() => setSortMode("points")}
+                                        onClick={() => setGamemode("points")}
                                     />
                                 </div>
                                 <div className="my-2 flex justify-between">
@@ -123,7 +124,7 @@ export default function Leaderboards() {
                                         type="radio"
                                         name="radio-10"
                                         className="radio checked:bg-slate-400"
-                                        onClick={() => setSortMode("points")}
+                                        onClick={() => setGamemode("points")}
                                     />
                                 </div>
                             </Glass>
@@ -145,7 +146,7 @@ export default function Leaderboards() {
                 </div>
                 {/* Assign a max-h-96 value here to cap the height of the leaderboard */}
                 <Glass className="scrollbar-hide flex-1 overflow-scroll">
-                    <Leaderboard refresh={trigger} user_id={sortUser} />
+                    <Leaderboard refresh={trigger} user_id={userid} level={level} game_mode={gamemode} />
                 </Glass>
             </div>
         </Frame>
