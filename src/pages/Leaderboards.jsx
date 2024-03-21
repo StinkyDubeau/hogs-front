@@ -91,7 +91,7 @@ export default function Leaderboards() {
             return (
                 <div onClick={handleClickAdvanced}>
                     <Button
-                        className="bg-zinc-800 hover:bg-zinc-700"
+                        className="bg-zinc-800 hover:bg-zinc-700 text-slate-300"
                         text="Show advanced"
                     />
                 </div>

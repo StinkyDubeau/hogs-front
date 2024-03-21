@@ -74,8 +74,8 @@ export default function News(props) {
     function createLoading() {
         return (
             <div className="mt-24">
-                <span className="loading loading-dots loading-sm"></span>
-                <p className="font-sansui text-xl">Loading some news...</p>
+                <span className="loading loading-dots loading-sm text-slate-200"></span>
+                <p className="font-sansui text-xl text-slate-200">Loading some news...</p>
             </div>
         );
     }
