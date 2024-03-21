@@ -10,6 +10,8 @@ export default function Leaderboards() {
     const [sortMode, setSortMode] = useState("points");
     const [sortVersion, setSortVersion] = useState("");
 
+    const [refresh, setRefresh] = useState(false);
+
     const [showAdvanced, setShowAdvanced] = useState(false);
 
     function createSummary() {
@@ -48,7 +50,8 @@ export default function Leaderboards() {
     }
 
     function handleSearch() {
-        setSortUser("heeei");
+        console.log("Refreshing results.");
+        setRefresh(true);
     }
 
     return (
@@ -123,7 +126,7 @@ export default function Leaderboards() {
                 </div>
                 {/* Assign a max-h-96 value here to cap the height of the leaderboard */}
                 <Glass className="scrollbar-hide flex-1 overflow-scroll">
-                    <Leaderboard />
+                    <Leaderboard refresh={refresh} user_id={sortUser}/>
                 </Glass>
             </div>
         </Frame>

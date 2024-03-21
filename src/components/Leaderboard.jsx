@@ -14,7 +14,7 @@ export default function Leaderboard(props) {
             }),
             body: JSON.stringify({
                 rows: 50,
-                user_id: props.user_id,
+                user_id: props.user_id === "" ? null : props.user_id,
                 level: props.level,
                 game_mode: props.game_mode,
                 game_version: props.game_version,
@@ -28,7 +28,7 @@ export default function Leaderboard(props) {
             .catch((err) => {
                 console.log(err);
             });
-    }, []);
+    }, [props.refresh]);
 
     function createRow(score, index) {
         return (
