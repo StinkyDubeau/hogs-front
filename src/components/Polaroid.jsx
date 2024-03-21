@@ -15,7 +15,7 @@ export default function Polaroid(props) {
                 <div className={styleString}>
                     <div className="h-[80%] bg-gradient-to-b from-zinc-700 to-slate-900">
                         <img
-                            className="h-full object-cover"
+                            className="h-full min-w-full object-cover"
                             src={props.img}
                             alt={props.alt}
                         />

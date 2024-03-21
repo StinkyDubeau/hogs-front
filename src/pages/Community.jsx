@@ -5,17 +5,17 @@ import Frame from "../components/Frame";
 export default function Community() {
     return (
         <Frame noNavbar noPad>
-            <div className="h-screen overflow-hidden bg-amber-800 bg-cork shadow-inner-4xl">
+            <div className="h-screen overflow-scroll bg-amber-800 bg-cork shadow-inner-4xl">
                 <Windowlight brightness="50" />
-                <div className="flex flex-wrap justify-center mt-[1/2vh]">
-                    <div className="border-2 border-black bg-red-300">
+                <div className="flex flex-wrap justify-center gap-10 md:mt-56 mt-10">
+                    <div className="">
                         <Polaroid
                             className="-rotate-3"
                             text="No image"
                             to="/"
                         />
                     </div>
-                    <div className="border-2 border-black bg-red-300">
+                    <div className="">
                         <Polaroid
                             className="rotate-3"
                             text="Four"
@@ -24,7 +24,7 @@ export default function Community() {
                             alt="the number four painted on a white brick wall"
                         />
                     </div>
-                    <div className="border-2 border-black bg-red-300">
+                    <div className="">
                         <Polaroid
                             className="rotate-6"
                             text="Leaderboards"
