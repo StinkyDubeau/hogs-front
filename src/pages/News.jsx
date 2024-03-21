@@ -1,8 +1,10 @@
 import Frame from "../components/Frame";
+import Button from "../components/Button";
 import { useState, useEffect } from "react";
 
 export default function News(props) {
     const [posts, setPosts] = useState([]);
+    const [selection, setSelection] = useState(0);
 
     useEffect(() => {
         fetch(`${import.meta.env.VITE_API_URL}/news/all`, {
@@ -26,12 +28,39 @@ export default function News(props) {
     }, [props.refresh]);
 
     function createFeedItem(post) {
-        return(
+        return (
             <>
                 <div>
-                    <p>hi</p>
+                    <Button>
+                        <p>{post.title}</p>
+                    </Button>
                 </div>
             </>
+        );
+    }
+
+    function createNewsFeed() {
+        return (
+            <>
+                <div className="flex border-2 border-slate-200">
+                    <div className="flex-0 border-2 border-slate-200 p-4">
+                        <p className="font-sansui text-3xl">Posts</p>
+                        <ul>{posts.map(createFeedItem)}</ul>
+                    </div>
+                    <div className="flex-1 border-2 border-slate-200">
+                        <p className="font-sansui text-3xl">Selected Post</p>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
+    function createLoading() {
+        return (
+            <div className="mt-24">
+                <span className="loading loading-dots loading-sm"></span>
+                <p className="font-sansui text-xl">Loading some news...</p>
+            </div>
         );
     }
 
@@ -39,16 +68,7 @@ export default function News(props) {
         <Frame noNavbar>
             <p>This is the news.</p>
 
-            <div>
-                <div className="flex border-2 border-slate-200 p-4">
-                    <div className="flex-0 border-2 border-slate-200">
-                        <p className="font-sansui text-3xl">Posts</p>
-                    </div>
-                    <div className="flex-1 border-2 border-slate-200">
-                        <p className="font-sansui text-3xl">Selected Post</p>
-                    </div>
-                </div>
-            </div>
+            <div>{posts[0] ? createNewsFeed() : createLoading()}</div>
         </Frame>
     );
 }

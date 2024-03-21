@@ -109,7 +109,7 @@ export default function Leaderboard(props) {
         return (
             <div className="">
                 <span className="loading loading-dots loading-sm"></span>
-                <p>Loading leaderboard...</p>
+                <p className="font-sansui text-xl">Loading leaderboard...</p>
             </div>
         );
     }
