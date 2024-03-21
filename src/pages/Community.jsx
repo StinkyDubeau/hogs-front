@@ -7,21 +7,21 @@ export default function Community() {
         <Frame noNavbar noPad>
             <div className="h-screen overflow-scroll bg-amber-800 bg-cork shadow-inner-4xl">
                 <Windowlight brightness="50" />
-                <div className="flex flex-wrap justify-center gap-10 md:mt-56 mt-10">
+                <div className="flex flex-wrap justify-center gap-10 md:mt-56 mb-32 my-10">
                     <div className="">
                         <Polaroid
                             className="-rotate-3"
-                            text="No image"
+                            text="Discord"
                             to="/"
                         />
                     </div>
                     <div className="">
                         <Polaroid
                             className="rotate-3"
-                            text="Four"
-                            to="/"
-                            img="./test-image-one.jpg"
-                            alt="the number four painted on a white brick wall"
+                            text="Dev News"
+                            to="/news"
+                            img="./filepath.jpg"
+                            alt=""
                         />
                     </div>
                     <div className="">
@@ -29,8 +29,8 @@ export default function Community() {
                             className="rotate-6"
                             text="Leaderboards"
                             to="/leaderboards"
-                            img="./hogs-background.png"
-                            alt="hogs gameplay"
+                            img="./"
+                            alt=""
                         />
                     </div>
                 </div>

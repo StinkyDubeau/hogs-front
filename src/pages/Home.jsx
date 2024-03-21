@@ -4,6 +4,7 @@ import About from "../components/About";
 import CommunityTicker from "../components/CommunityTicker";
 import HogsLogo from "../assets/HOGS logo.png";
 import Button from "../components/Button";
+import Trailer from "../assets/trailer.webm"
 
 export default function Home() {
     return (
@@ -14,14 +15,16 @@ export default function Home() {
                     <video
                         muted
                         autoPlay
+                        allowFullscreen="false"
                         loop
                         className="min-h-96 object-cover"
                     >
                         <source
-                            src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_20mb.mp4"
+                            src={Trailer}
                             type="video/mp4"
                         />
                     </video>
+                    
                     <div
                         id="CallToAction"
                         className="absolute inset-12 flex flex-col items-center justify-center"
