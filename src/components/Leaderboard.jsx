@@ -30,6 +30,30 @@ export default function Leaderboard(props) {
             });
     }, [props.refresh]);
 
+    const sortLeaderboard = (field) => {
+        let primer = parseInt();
+        let reverse = true;
+
+        if(props.sort_by === "time"){
+            reverse = false;
+        }
+
+
+        const key = primer
+            ? function (x) {
+                  return primer(x[field]);
+              }
+            : function (x) {
+                  return x[field];
+              };
+
+        reverse = !reverse ? 1 : -1;
+
+        return function (a, b) {
+            return (a = key(a)), (b = key(b)), reverse * ((a > b) - (b > a));
+        };
+    };
+
     function createRow(score, index) {
         return (
             <tr
@@ -52,30 +76,7 @@ export default function Leaderboard(props) {
         );
     }
 
-    const sortLeaderboard = (field) => {
-        let reverse = () => {
-            if(props.sort_by === "time"){
-                return false;
-            } else {
-                return true;
-            }
-        };
-        const primer = parseInt();
 
-        const key = primer
-            ? function (x) {
-                  return primer(x[field]);
-              }
-            : function (x) {
-                  return x[field];
-              };
-
-        reverse = !reverse ? 1 : -1;
-
-        return function (a, b) {
-            return (a = key(a)), (b = key(b)), reverse * ((a > b) - (b > a));
-        };
-    };
 
     function createLeaderboard(scores) {
         return (

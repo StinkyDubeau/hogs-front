@@ -33,7 +33,7 @@ export default function Leaderboards() {
                 <Glass className="p-6">
                     <p className="mb-4">{createSummary()}</p>
 
-                    <Glass className="input input-bordered h-full px-8">
+                    <Glass className="h-full px-8">
                         <span className="material-symbols-outlined text-slate-300">
                             swap_vert
                         </span>
@@ -79,59 +79,75 @@ export default function Leaderboards() {
             <div className="flex-wrap gap-2 md:flex">
                 <div className="md:max-w-xs">
                     <Glass className="">
-                        <div className="flex justify-center gap-2  md:flex-col">
-                            <div className="">
-                                <span className="material-symbols-outlined text-slate-300">
-                                    filter_alt
-                                </span>
-                                <input
-                                    type="text"
-                                    placeholder="User"
-                                    value={userid}
-                                    className="input input-bordered my-2 w-full max-w-xs rounded-xl p-5"
-                                    onChange={(e) => setUserid(e.target.value)}
-                                />
-                                <input
-                                    type="text"
-                                    placeholder="Level"
-                                    value={level}
-                                    className="input input-bordered w-full max-w-xs rounded-xl p-5"
-                                    onChange={(e) => sortLevel(e.target.value)}
-                                />
+                        <div className="justify-center gap-2  md:flex-col">
+                            <div className=" gap-2 md:inline">
+                                <Glass className="bg-zinc-800">
+                                    <span className="material-symbols-outlined text-slate-300">
+                                        swap_vert
+                                    </span>
+                                    <div className="my-2 flex justify-between">
+                                        <span className="label-text">
+                                            Points
+                                        </span>
+                                        <input
+                                            type="radio"
+                                            name="radio-10"
+                                            className="radio checked:bg-slate-400"
+                                            onClick={() => setSortBy("points")}
+                                        />
+                                    </div>
+                                    <div className="my-2 flex justify-between">
+                                        <span className="label-text">Time</span>
+                                        <input
+                                            type="radio"
+                                            name="radio-10"
+                                            className="radio checked:bg-slate-400"
+                                            onClick={() => setSortBy("time")}
+                                        />
+                                    </div>
+                                </Glass>
+                                <Glass className="h-full bg-zinc-800">
+                                    <div>
+                                        <span className="material-symbols-outlined text-slate-300">
+                                            filter_alt
+                                        </span>
+                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder="User"
+                                        value={userid}
+                                        className="input input-bordered my-2 w-full max-w-xs rounded-xl p-5"
+                                        onChange={(e) =>
+                                            setUserid(e.target.value)
+                                        }
+                                    />
+                                    <input
+                                        type="text"
+                                        placeholder="Level"
+                                        value={level}
+                                        className="input input-bordered w-full max-w-xs rounded-xl p-5"
+                                        onChange={(e) =>
+                                            sortLevel(e.target.value)
+                                        }
+                                    />
+                                    <div
+                                        className="mt-2 flex justify-center"
+                                        onClick={handleSearch}
+                                    >
+                                        <Button
+                                            className="w-32"
+                                            text="Filter"
+                                        ></Button>
+                                    </div>
+                                </Glass>
                             </div>
 
-                            <Glass className="input input-bordered h-full">
-                                <span className="material-symbols-outlined text-slate-300">
-                                    swap_vert
-                                </span>
-                                <div className="my-2 flex justify-between">
-                                    <span className="label-text">Points</span>
-                                    <input
-                                        type="radio"
-                                        name="radio-10"
-                                        className="radio checked:bg-slate-400"
-                                        onClick={() => setSortBy("points")}
-                                    />
-                                </div>
-                                <div className="my-2 flex justify-between">
-                                    <span className="label-text">Time</span>
-                                    <input
-                                        type="radio"
-                                        name="radio-10"
-                                        className="radio checked:bg-slate-400"
-                                        onClick={() => setSortBy("time")}
-                                    />
-                                </div>
-                            </Glass>
-                            <div onClick={handleSearch}>
-                                <Button className="w-60" text="Search"></Button>
-                            </div>
                             <div
                                 onClick={handleClickAdvanced}
                                 className={() => showAdvanced && "hidden"}
                             >
                                 <Button
-                                    className="bg-zinc-700 hover:bg-zinc-600"
+                                    className="bg-zinc-800 hover:bg-zinc-700"
                                     text="Advanced"
                                 />
                             </div>
