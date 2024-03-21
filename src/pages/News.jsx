@@ -27,14 +27,29 @@ export default function News(props) {
             });
     }, [props.refresh]);
 
-    function createFeedItem(post) {
+    function createFeedItem(post, index) {
+        return (
+            <div key={index}>
+                <Button
+                    onClick={() => {
+                        console.log(index);
+                        setSelection(index);
+                    }}
+                >
+                    <p>{post.title}</p>
+                </Button>
+            </div>
+        );
+    }
+
+    function createPost() {
+        let post = posts[selection];
         return (
             <>
-                <div>
-                    <Button>
-                        <p>{post.title}</p>
-                    </Button>
-                </div>
+                <p className="text-left font-sansui text-3xl">{post.title}</p>
+                <p className="text-left font-sansui text-xl">{post.author}</p>
+                <p className="text-left font-sansui text-lg">{post.body}</p>
+                <p className="text-right font-sansui text-xs">{post._id}</p>
             </>
         );
     }
@@ -47,8 +62,9 @@ export default function News(props) {
                         <p className="font-sansui text-3xl">Posts</p>
                         <ul>{posts.map(createFeedItem)}</ul>
                     </div>
-                    <div className="flex-1 border-2 border-slate-200">
+                    <div className="flex-1 border-2 border-slate-200 p-4">
                         <p className="font-sansui text-3xl">Selected Post</p>
+                        {createPost()}
                     </div>
                 </div>
             </>
@@ -66,9 +82,11 @@ export default function News(props) {
 
     return (
         <Frame noNavbar>
-            <p>This is the news.</p>
-
-            <div>{posts[0] ? createNewsFeed() : createLoading()}</div>
+            {/* Only render news component if there's something loaded. */}
+            {/* TODO: Load the CRT regardless of actual state. */}
+            <div className="mt-12">
+                {posts[0] ? createNewsFeed() : createLoading()}
+            </div>
         </Frame>
     );
 }

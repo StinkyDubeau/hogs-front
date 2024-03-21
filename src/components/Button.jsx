@@ -8,7 +8,7 @@ export default function Button(props) {
     const styleString = `${props.className} ${classString}`;
 
     return (
-        <button className="font-sansui">
+        <button className="font-sansui" onClick={props.onClick}>
             <div className={`${styleString} border border-x-[#ffffff22] border-b-[#ffffff22] border-t-[#ffffff33] shadow-lg`}>
                 <p className="mt-0.5">{props.text}</p>
                 {props.children}
