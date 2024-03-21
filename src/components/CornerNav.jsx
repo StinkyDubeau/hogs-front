@@ -18,23 +18,15 @@ export default function CornerNav(props) {
                     <Link className="" to="/community">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
-                                communities
+                                forum
                             </span>
                         </Button>
                     </Link>
 
-                    <Link className="" to="/news">
+                    <Link className="" to="/leaderboards">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
-                                news
-                            </span>
-                        </Button>
-                    </Link>
-
-                    <Link className="" to="/about">
-                        <Button className="h-12 w-12">
-                            <span className="material-symbols-outlined mt-1 text-slate-300">
-                                help
+                                trophy
                             </span>
                         </Button>
                     </Link>

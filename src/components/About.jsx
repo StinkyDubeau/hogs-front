@@ -1,4 +1,5 @@
 import ReactPlayer from "react-player";
+import Trailer from "../assets/trailer.webm"
 
 export default function About(props) {
     return (
@@ -6,7 +7,7 @@ export default function About(props) {
             <ReactPlayer
                 playsinline
                 className="-z-50 mask-radial"
-                url="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_20mb.mp4"
+                url={Trailer}
                 playing
                 muted
                 loop

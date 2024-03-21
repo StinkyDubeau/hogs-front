@@ -31,12 +31,12 @@ export default function Leaderboards() {
         if (showAdvanced) {
             return (
                 <Glass className="p-6">
-                    <p className="mb-4">{createSummary()}</p>
+                    <Glass className="bg-zinc-800">
+                        <p className="font-sansui text-lg">Active params:</p>
+                        <p className="mb-4 font-sansui">{createSummary()}</p>
+                    </Glass>
 
-                    <Glass className="h-full px-8">
-                        <span className="material-symbols-outlined text-slate-300">
-                            swap_vert
-                        </span>
+                    <Glass className="h-full bg-zinc-800 px-8">
                         <div className="flex justify-between gap-4">
                             <p>Show cheaters</p>
                             <input
@@ -45,7 +45,7 @@ export default function Leaderboards() {
                                 className="checkbox"
                             />
                         </div>
-                        <div className="flex justify-between gap-4">
+                        <div className="mt-2 flex justify-between gap-4">
                             <p>Show old versions</p>
                             <input
                                 type="checkbox"
@@ -54,9 +54,13 @@ export default function Leaderboards() {
                             />
                         </div>
                     </Glass>
-
-                    <div onClick={handleClickAdvanced}>
-                        <Button text="Close"></Button>
+                    <div className="flex justify-center">
+                        <div onClick={handleSearch}>
+                            <Button text="Refresh"></Button>
+                        </div>
+                        <div onClick={handleClickAdvanced}>
+                            <Button text="Close"></Button>
+                        </div>
                     </div>
                 </Glass>
             );
@@ -75,38 +79,40 @@ export default function Leaderboards() {
     }
 
     return (
-        <Frame noCornerNav>
-            <div className="flex-wrap gap-2 md:flex">
+        <Frame noNavbar>
+            <div className="mt-12 flex-wrap gap-2 md:flex">
                 <div className="md:max-w-xs">
-                    <Glass className="">
+
                         <div className="justify-center gap-2  md:flex-col">
                             <div className=" gap-2 md:inline">
-                                <Glass className="bg-zinc-800">
+                                <Glass>
                                     <span className="material-symbols-outlined text-slate-300">
                                         swap_vert
                                     </span>
                                     <div className="my-2 flex justify-between">
-                                        <span className="label-text">
+                                        <span className="font-sansui text-slate-300">
                                             Points
                                         </span>
                                         <input
                                             type="radio"
                                             name="radio-10"
-                                            className="radio checked:bg-slate-400"
+                                            className="radio checked:bg-slate-300"
                                             onClick={() => setSortBy("points")}
                                         />
                                     </div>
                                     <div className="my-2 flex justify-between">
-                                        <span className="label-text">Time</span>
+                                        <span className="font-sansui text-slate-300">
+                                            Time
+                                        </span>
                                         <input
                                             type="radio"
                                             name="radio-10"
-                                            className="radio checked:bg-slate-400"
+                                            className="radio checked:bg-slate-300"
                                             onClick={() => setSortBy("time")}
                                         />
                                     </div>
                                 </Glass>
-                                <Glass className="h-full bg-zinc-800">
+                                <Glass className="h-full">
                                     <div>
                                         <span className="material-symbols-outlined text-slate-300">
                                             filter_alt
@@ -116,7 +122,7 @@ export default function Leaderboards() {
                                         type="text"
                                         placeholder="User"
                                         value={userid}
-                                        className="my-2 h-12 w-full max-w-xs rounded-xl border border-zinc-700 bg-zinc-900 p-5"
+                                        className="my-2 h-12 w-full max-w-xs rounded-xl bg-[#00000044] shadow-inner-xl p-5 font-sansui"
                                         onChange={(e) =>
                                             setUserid(e.target.value)
                                         }
@@ -125,7 +131,7 @@ export default function Leaderboards() {
                                         type="text"
                                         placeholder="Level"
                                         value={level}
-                                        className="h-12 w-full max-w-xs rounded-xl border border-zinc-700 bg-zinc-900 p-5"
+                                        className="h-12 w-full max-w-xs rounded-xl bg-[#00000044] shadow-inner-xl p-5 font-sansui"
                                         onChange={(e) =>
                                             sortLevel(e.target.value)
                                         }
@@ -153,7 +159,7 @@ export default function Leaderboards() {
                                 />
                             </div>
                         </div>
-                    </Glass>
+
                     <div>{createAdvanced()}</div>
                 </div>
                 {/* Assign a max-h-96 value here to cap the height of the leaderboard */}
