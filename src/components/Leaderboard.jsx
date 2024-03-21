@@ -72,8 +72,8 @@ export default function Leaderboard(props) {
 
     function createLoading() {
         return (
-            <div className="flex-col justify-center">
-                <span className="loading loading-spinner loading-md"></span>
+            <div className="">
+                <span className="loading loading-dots loading-sm"></span>
                 <p>Loading leaderboard...</p>
             </div>
         );
