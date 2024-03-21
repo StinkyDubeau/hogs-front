@@ -15,6 +15,7 @@ export default function Home() {
                     <video
                         muted
                         autoPlay
+                        playsinline
                         allowFullscreen="false"
                         loop
                         className="min-h-96 object-cover"

@@ -4,11 +4,11 @@ export default function Windowlight(props) {
         <div
             className={`lighting-fx blur-md opacity-${props.brightness} pointer-events-none fixed z-30 mix-blend-overlay`}
         >
-            <div className="mix relative left-[300px] top-[100px] grid grid-cols-2 gap-8">
-                <div className="h-96 w-48 bg-white"></div>
-                <div className="h-96 w-48 bg-white"></div>
-                <div className="h-96 w-48 bg-white"></div>
-                <div className="h-96 w-48 bg-white"></div>
+            <div className="mix relative left-[300px] top-[80px] grid grid-cols-2 gap-8">
+                <div className="h-80 w-48 bg-white"></div>
+                <div className="h-80 w-48 bg-white"></div>
+                <div className="h-80 w-48 bg-white"></div>
+                <div className="h-80 w-48 bg-white"></div>
             </div>
         </div>
     );
