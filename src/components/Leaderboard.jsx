@@ -57,7 +57,7 @@ export default function Leaderboard(props) {
         return (
             <tr
                 key={score._id}
-                className="m-2 scale-95 rounded-lg border-slate-700 transition-all hover:scale-100 hover:bg-slate-500 hover:shadow-lg"
+                className="scale-95  border-x-[#ffffff20] border-b-[#ffffff16] border-t-[#ffffff44] transition-all hover:scale-100 hover:border hover:bg-[#ffffff11] hover:shadow-lg"
             >
                 <td className="font-sansui">{index + 1}</td>
                 <td className="font-sansui">{score.user_id}</td>
@@ -65,11 +65,11 @@ export default function Leaderboard(props) {
                 <td className="font-sansui">{score.points}</td>
                 <td className="font-sansui">{score.time / 1000} seconds</td>
                 <td className="justify-between text-right font-sansui text-xs text-slate-400">
-                    <div>
+                    <div className="m-2">
                         <p>Gamemode: {score.game_mode}</p>
                         <p>Game version: {score.game_version}</p>
+                        <p className="">{score._id}</p>
                     </div>
-                    <p className="">{score._id}</p>
                 </td>
             </tr>
         );
