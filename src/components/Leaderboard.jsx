@@ -64,7 +64,7 @@ export default function Leaderboard(props) {
                 <td>{score.user_id}</td>
                 <td>{score.level}</td>
                 <td>{score.points}</td>
-                <td>{score.time}</td>
+                <td>{score.time/1000} seconds</td>
                 <td className="justify-between text-right text-xs text-slate-400">
                     <div>
                         <p>Gamemode: {score.game_mode}</p>

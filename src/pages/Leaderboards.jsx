@@ -116,7 +116,7 @@ export default function Leaderboards() {
                                         type="text"
                                         placeholder="User"
                                         value={userid}
-                                        className="bg-zinc-900 border-zinc-700 border h-12 my-2 w-full max-w-xs rounded-xl p-5"
+                                        className="my-2 h-12 w-full max-w-xs rounded-xl border border-zinc-700 bg-zinc-900 p-5"
                                         onChange={(e) =>
                                             setUserid(e.target.value)
                                         }
@@ -125,10 +125,11 @@ export default function Leaderboards() {
                                         type="text"
                                         placeholder="Level"
                                         value={level}
-                                        className="bg-zinc-900 border-zinc-700 border h-12 w-full max-w-xs rounded-xl p-5"
+                                        className="h-12 w-full max-w-xs rounded-xl border border-zinc-700 bg-zinc-900 p-5"
                                         onChange={(e) =>
                                             sortLevel(e.target.value)
                                         }
+                                        onSubmit={handleSearch}
                                     />
                                     <div
                                         className="mt-2 flex justify-center"
