@@ -75,28 +75,84 @@ export default function Home() {
                 <About />
             </div>
 
-            {/* Can optionally place text within this divider */}
-            <div className="divider divider-accent font-sansui text-slate-300"></div>
-
-            <div id="fast-paced" className="my-20 flex-auto md:flex">
-                <p className="font-sansui text-2xl text-slate-200">
-                    Explore the dark reality of a Post-Singularist England ruled
-                    by pigs in a story told through environmental details and
-                    context clues. Levels are non-linear, featuring multiple
-                    paths to choose from when engaging the enemy. Will you sneak
-                    in from behind enemy lines or go guns-a-blazing through the
-                    front door.
-                </p>
-                <div className="flex justify-center">
+            <Glass
+                id="nonlinear"
+                className="my-10 justify-between gap-6 md:flex"
+            >
+                <div>
+                <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                        H.O.G.S is an immersive FPS
+                    </p>
+                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                        Throw objects, kick down doors or smash windows and
+                        flank from behind. Use the environment to your
+                        advantage. Get smart, or get killed.
+                    </p>
+                </div>
+                <div className="mt-8 flex aspect-video min-h-48 justify-center md:m-auto">
                     <img
+                        className=""
+                        src={HomeGif3}
+                        alt="An animated gif showing fast-paced gameplay in HOGs"
+                    ></img>
+                </div>
+            </Glass>
+
+            <Glass
+                id="immersive FPS"
+                className="my-10 justify-between gap-6 md:flex"
+            >
+                <div className="md:hidden">
+                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                        H.O.G.S is an immersive FPS
+                    </p>
+                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                        Throw objects, kick down doors or smash windows and
+                        flank from behind. Use the environment to your
+                        advantage. Get smart, or get killed.
+                    </p>
+                </div>
+                <div className="mt-8 flex aspect-video min-h-48 justify-center md:m-auto">
+                    <img
+                        className=""
+                        src={HomeGif2}
+                        alt="An animated gif showing fast-paced gameplay in HOGs"
+                    ></img>
+                </div>
+                <div className="max-md:hidden">
+                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                        H.O.G.S is an immersive FPS
+                    </p>
+                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                        Throw objects, kick down doors or smash windows and
+                        flank from behind. Use the environment to your
+                        advantage. Get smart, or get killed.
+                    </p>
+                </div>
+            </Glass>
+
+            <Glass
+                id="nonlinear"
+                className="my-10 justify-between gap-6 md:flex"
+            >
+                <div>
+                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                        Levels are non-linear
+                    </p>
+                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                        There are multiple paths to choose from when engaging
+                        the enemy; will you sneak in from behind enemy lines, or
+                        go guns-a-blazing through the front door?
+                    </p>
+                </div>
+                <div className="mt-8 flex aspect-video min-h-48 justify-center md:m-auto">
+                    <img
+                        className=""
                         src={HomeGif1}
                         alt="An animated gif showing fast-paced gameplay in HOGs"
                     ></img>
                 </div>
-            </div>
-
-            <div className="divider divider-accent font-sansui text-slate-300"></div>
-
+            </Glass>
 
             <div id="steam_embed" className="mt-24 flex justify-center">
                 <iframe
