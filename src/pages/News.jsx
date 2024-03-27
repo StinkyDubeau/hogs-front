@@ -55,14 +55,14 @@ export default function News(props) {
     function createNewsFeed() {
         return (
             <>
-                <div className="flex flex-col-reverse justify-center gap-2  md:flex-initial md:flex">
+                <div className="flex justify-center gap-2  md:flex md:flex-initial">
                     <Glass className="p-4">
                         {/* <p className="font-sansui text-3xl">Posts</p> */}
                         <ul className="flex flex-col gap-2">
                             {posts.map(createFeedItem)}
                         </ul>
                     </Glass>
-                    <Glass className="p-4">
+                    <Glass className="flex-1 p-4">
                         {/* <p className="font-sansui text-3xl">Selected Post</p> */}
                         {createPost()}
                     </Glass>
@@ -75,7 +75,9 @@ export default function News(props) {
         return (
             <div className="mt-24">
                 <span className="loading loading-dots loading-sm text-slate-200"></span>
-                <p className="font-sansui text-xl text-slate-200">Loading some news...</p>
+                <p className="font-sansui text-xl text-slate-200">
+                    Loading some news...
+                </p>
             </div>
         );
     }
@@ -84,7 +86,7 @@ export default function News(props) {
         <Frame noNavbar>
             {/* Only render news component if there's something loaded. */}
             {/* TODO: Load the CRT regardless of actual state. */}
-            <div className="sm:mt-12 mt-2">
+            <div className="mt-2 sm:mt-12">
                 {posts[0] ? createNewsFeed() : createLoading()}
             </div>
         </Frame>
