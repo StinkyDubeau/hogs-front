@@ -5,6 +5,9 @@ import CommunityTicker from "../components/CommunityTicker";
 import HogsLogo from "../assets/HOGS logo.png";
 import Button from "../components/Button";
 import Trailer from "../assets/trailer.webm";
+import HomeGif1 from "../assets/home-gif-1.gif";
+import HomeGif2 from "../assets/home-gif-2.gif";
+import HomeGif3 from "../assets/home-gif-3.gif";
 
 export default function Home() {
     return (
@@ -68,17 +71,34 @@ export default function Home() {
 
             <div className="mt-20" />
 
-            <div id="about">
+            <div id="about" className="my-20">
                 <About />
             </div>
 
-            <div id="fast-paced" className="flex xl:flex-col">
-                <p className="text-2xl font-sansui text-slate-200">Fast-paced Gameplay</p>
-                <img alt="An aniamted gif showing fast-paced gameplay in HOGs"></img>
+            {/* Can optionally place text within this divider */}
+            <div className="divider divider-accent font-sansui text-slate-300"></div>
 
+            <div id="fast-paced" className="my-20 flex-auto md:flex">
+                <p className="font-sansui text-2xl text-slate-200">
+                    Explore the dark reality of a Post-Singularist England ruled
+                    by pigs in a story told through environmental details and
+                    context clues. Levels are non-linear, featuring multiple
+                    paths to choose from when engaging the enemy. Will you sneak
+                    in from behind enemy lines or go guns-a-blazing through the
+                    front door.
+                </p>
+                <div className="flex justify-center">
+                    <img
+                        src={HomeGif1}
+                        alt="An animated gif showing fast-paced gameplay in HOGs"
+                    ></img>
+                </div>
             </div>
 
-            <div id="steam_embed" className="mt-10 flex justify-center">
+            <div className="divider divider-accent font-sansui text-slate-300"></div>
+
+
+            <div id="steam_embed" className="mt-24 flex justify-center">
                 <iframe
                     src="https://store.steampowered.com/widget/2899270/"
                     frameborder="0"
