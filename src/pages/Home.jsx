@@ -154,7 +154,7 @@ export default function Home() {
                 </div>
             </Glass>
 
-            <div id="steam_embed" className="mt-24 flex justify-center">
+            <div id="steam_embed" className="my-10 flex justify-center">
                 <iframe
                     src="https://store.steampowered.com/widget/2899270/"
                     frameborder="0"
