@@ -80,7 +80,7 @@ export default function Home() {
                 className="my-10 justify-between gap-6 md:flex"
             >
                 <div>
-                <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
                         H.O.G.S is an immersive FPS
                     </p>
                     <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
@@ -103,13 +103,13 @@ export default function Home() {
                 className="my-10 justify-between gap-6 md:flex"
             >
                 <div className="md:hidden">
+                    {/* ENSURE YOU CHANGE BOTH SECTIONS IF UPDATING THIS TEXT! */}
                     <p className="text-left font-sansui text-4xl font-bold text-slate-200">
-                        H.O.G.S is an immersive FPS
+                        Explore a dark reality
                     </p>
                     <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
-                        Throw objects, kick down doors or smash windows and
-                        flank from behind. Use the environment to your
-                        advantage. Get smart, or get killed.
+                        A Post-Singularist England ruled by pigs in a story told
+                        through environmental details and context clues.
                     </p>
                 </div>
                 <div className="mt-8 flex aspect-video min-h-48 justify-center md:m-auto">
@@ -120,13 +120,13 @@ export default function Home() {
                     ></img>
                 </div>
                 <div className="max-md:hidden">
+                    {/* ENSURE YOU CHANGE BOTH SECTIONS IF UPDATING THIS TEXT! */}
                     <p className="text-left font-sansui text-4xl font-bold text-slate-200">
-                        H.O.G.S is an immersive FPS
+                        Explore a dark reality
                     </p>
                     <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
-                        Throw objects, kick down doors or smash windows and
-                        flank from behind. Use the environment to your
-                        advantage. Get smart, or get killed.
+                        A Post-Singularist England ruled by pigs in a story told
+                        through environmental details and context clues.
                     </p>
                 </div>
             </Glass>

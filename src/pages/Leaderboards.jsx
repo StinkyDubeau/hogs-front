@@ -130,7 +130,7 @@ export default function Leaderboards() {
                                     <input
                                         type="radio"
                                         name="radio-10"
-                                        className="radio checked:bg-slate-300"
+                                        className="radio radio-dark bg-[#00000044] shadow-inner-xl"
                                         onClick={() => setSortBy("points")}
                                     />
                                 </div>
@@ -141,7 +141,7 @@ export default function Leaderboards() {
                                     <input
                                         type="radio"
                                         name="radio-10"
-                                        className="radio checked:bg-slate-300"
+                                        className="radio radio-dark bg-[#00000044] shadow-inner-xl"
                                         onClick={() => setSortBy("time")}
                                     />
                                 </div>
