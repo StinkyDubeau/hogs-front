@@ -17,6 +17,7 @@ export default function Community() {
                             text="Discord"
                             img={DiscordImg}
                             to="/"
+                            alt="A pig wearing a gaming headset."
                         />
                     </div>
                     <div className="">
@@ -25,7 +26,7 @@ export default function Community() {
                             text="Dev News"
                             to="/news"
                             img={NewsImg}
-                            alt=""
+                            alt="A pig reading the news."
                         />
                     </div>
                     <div className="">
@@ -34,7 +35,7 @@ export default function Community() {
                             text="Leaderboards"
                             to="/leaderboards"
                             img={LeaderImg}
-                            alt=""
+                            alt="Three pigs on a podium."
                         />
                     </div>
                 </div>
