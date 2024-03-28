@@ -64,7 +64,7 @@ export default function News(props) {
     function createNewsFeed() {
         return (
             <>
-                <div className="flex justify-center gap-2  md:flex md:flex-initial">
+                <div className="flex justify-center gap-2 border-2 border-white bg-cork md:flex md:flex-initial">
                     <div className="border border-slate-200 p-4">
                         <p className="font-pixel text-3xl text-slate-400">
                             Posts
