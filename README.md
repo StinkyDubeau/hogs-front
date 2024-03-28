@@ -29,7 +29,7 @@ More to come.
 
 1. Deploy hogs-front to amplify
 2. Deploy hogs-api to EC2
-3. Set hogs-front's environment variable to point to EC2's public IP:3001
+3. Set hogs-front's environment variable to point to EC2's public IP:3001 *Ensure there is no "/" at the end of the line*
 4. Change the security group settings on EC2 to allow connections from amplify*
 
 
