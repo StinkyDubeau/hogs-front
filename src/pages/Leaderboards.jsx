@@ -24,7 +24,7 @@ export default function Leaderboards() {
     function handleSearch() {
         console.log("Refreshing results.");
         !showCheaters ? setGamemode("story") : setGamemode("");
-        !showOld ? setGameversion("0.2.0") : setGameversion("");
+        !showOld ? setGameversion("0.2.5") : setGameversion("");
         setTrigger(trigger + 1);
     }
 
