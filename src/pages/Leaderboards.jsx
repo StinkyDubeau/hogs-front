@@ -130,7 +130,7 @@ export default function Leaderboards() {
                                     <input
                                         type="radio"
                                         name="radio-10"
-                                        className="radio radio-dark bg-[#00000044] shadow-inner-xl"
+                                        className="radio-dark radio bg-[#00000044] shadow-inner-xl"
                                         onClick={() => setSortBy("points")}
                                     />
                                 </div>
@@ -141,7 +141,7 @@ export default function Leaderboards() {
                                     <input
                                         type="radio"
                                         name="radio-10"
-                                        className="radio radio-dark bg-[#00000044] shadow-inner-xl"
+                                        className="radio-dark radio bg-[#00000044] shadow-inner-xl"
                                         onClick={() => setSortBy("time")}
                                     />
                                 </div>
@@ -156,14 +156,14 @@ export default function Leaderboards() {
                                     type="text"
                                     placeholder="User"
                                     value={userid}
-                                    className="shadow-inner-xl my-2 h-12 w-full max-w-xs rounded-xl bg-[#00000044] p-5 font-sansui"
+                                    className="my-2 h-12 w-full max-w-xs rounded-xl bg-[#00000044] p-5 font-sansui shadow-inner-xl"
                                     onChange={(e) => setUserid(e.target.value)}
                                 />
                                 <input
                                     type="text"
                                     placeholder="Level"
                                     value={level}
-                                    className="shadow-inner-xl h-12 w-full max-w-xs rounded-xl bg-[#00000044] p-5 font-sansui"
+                                    className="h-12 w-full max-w-xs rounded-xl bg-[#00000044] p-5 font-sansui shadow-inner-xl"
                                     onChange={(e) => sortLevel(e.target.value)}
                                     onSubmit={handleSearch}
                                 />
@@ -183,7 +183,7 @@ export default function Leaderboards() {
                     <div>{createAdvanced()}</div>
                 </div>
                 {/* Assign a max-h-96 value here to cap the height of the leaderboard */}
-                <Glass className="scrollbar-hide flex-1 overflow-scroll">
+                <Glass className="scrollbar-hide max-h-screen flex-1 overflow-scroll">
                     <Leaderboard
                         refresh={trigger}
                         user_id={userid}

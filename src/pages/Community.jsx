@@ -1,6 +1,9 @@
 import Polaroid from "../components/Polaroid";
 import Windowlight from "../components/effects/Windowlight";
 import Frame from "../components/Frame";
+import DiscordImg from "../assets/discord.webp"
+import NewsImg from "../assets/news.webp"
+import LeaderImg from "../assets/leaderboards.webp"
 
 export default function Community() {
     return (
@@ -12,6 +15,7 @@ export default function Community() {
                         <Polaroid
                             className="-rotate-3"
                             text="Discord"
+                            img={DiscordImg}
                             to="/"
                         />
                     </div>
@@ -20,7 +24,7 @@ export default function Community() {
                             className="rotate-3"
                             text="Dev News"
                             to="/news"
-                            img="./filepath.jpg"
+                            img={NewsImg}
                             alt=""
                         />
                     </div>
@@ -29,7 +33,7 @@ export default function Community() {
                             className="rotate-6"
                             text="Leaderboards"
                             to="/leaderboards"
-                            img="./"
+                            img={LeaderImg}
                             alt=""
                         />
                     </div>
