@@ -33,6 +33,7 @@ export default {
             ipsum: ["Flow Circular", "sans-serif"],
             sansui: ["Josefin Sans", "sans-serif"],
             pixel: ["Pixelify Sans", "mono"],
+            mono: ["mono"]
         },
     },
     plugins: [require("@pyncz/tailwind-mask-image"), require("daisyui")],

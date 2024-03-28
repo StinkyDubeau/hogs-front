@@ -31,9 +31,12 @@ export default function News(props) {
     function createFeedItem(post, index) {
         return (
             <div key={index}>
-                <Button className="w-56" onClick={() => setSelection(index)}>
+                <button
+                    className="h-12 w-56 border border-slate-100"
+                    onClick={() => setSelection(index)}
+                >
                     <p className="font-pixel text-slate-100">{post.title}</p>
-                </Button>
+                </button>
             </div>
         );
     }
@@ -42,7 +45,7 @@ export default function News(props) {
         let post = posts[selection];
         return (
             <>
-                <p className="font-pixell text-left text-3xl text-slate-100">
+                <p className="text-left font-pixel text-3xl text-slate-100">
                     {post.title}
                 </p>
                 <p className="text-left font-pixel text-xl text-slate-100">
@@ -51,7 +54,7 @@ export default function News(props) {
                 <p className="text-left font-pixel text-lg text-slate-100">
                     {post.body}
                 </p>
-                <p className="text-right font-pixel text-xs text-slate-100 text-slate-400">
+                <p className="font-mono text-right text-xs text-slate-400">
                     id: {post._id}
                 </p>
             </>
@@ -62,14 +65,18 @@ export default function News(props) {
         return (
             <>
                 <div className="flex justify-center gap-2  md:flex md:flex-initial">
-                    <div className="p-4">
-                        {/* <p className="font-pixel text-3xl">Posts</p> */}
-                        <ul className="flex flex-col gap-2">
+                    <div className="border border-slate-200 p-4">
+                        <p className="font-pixel text-3xl text-slate-400">
+                            Posts
+                        </p>
+                        <ul className="flex flex-col">
                             {posts.map(createFeedItem)}
                         </ul>
                     </div>
-                    <div className="flex-1 p-4">
-                        {/* <p className="font-pixel text-3xl">Selected Post</p> */}
+                    <div className="max-h-96 flex-1 overflow-scroll border border-slate-200 p-4">
+                        <p className="font-pixel text-3xl text-slate-400">
+                            Selected Post
+                        </p>
                         {createPost()}
                     </div>
                 </div>
