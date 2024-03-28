@@ -21,7 +21,7 @@ export default function About(props) {
                     reimagined
                 </h1>
                 <p className="font-sansui text-2xl">
-                    Hogs is the perfect union between the political satire of
+                    H.O.G.S is the perfect union between the political satire of
                     <i>Animal Farm</i> and the bleak oppression of <i>1984</i>.
                     The story roughly follows the plot of <i>Animal Farm</i>,
                     sixteen years after the original, reimagined for a modern
