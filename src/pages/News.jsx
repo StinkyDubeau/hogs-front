@@ -64,20 +64,36 @@ export default function News(props) {
     function createNewsFeed() {
         return (
             <>
-                <div className="flex justify-center gap-2 border-2 border-white bg-cork md:flex md:flex-initial">
-                    <div className="border border-slate-200 p-4">
-                        <p className="font-pixel text-3xl text-slate-400">
-                            Posts
-                        </p>
-                        <ul className="flex flex-col">
-                            {posts.map(createFeedItem)}
-                        </ul>
+                {/* TV */}
+                <div className="flex rounded-xl border-2 border-white bg-zinc-600 px-5 py-10">
+                    {/* Controls */}
+                    <div className="ml-5 mr-10">
+                        {/* Knob */}
+                        <div className={`flex h-20 w-20 rotate-[49deg] justify-center rounded-full bg-zinc-800 align-middle`}>
+                            <div
+                                className={`h-20 w-3 rounded-full bg-zinc-700`}
+                            >
+                                {selection*2}
+                            </div>
+                        </div>
                     </div>
-                    <div className="max-h-96 flex-1 overflow-scroll border border-slate-200 p-4">
-                        <p className="font-pixel text-3xl text-slate-400">
-                            Selected Post
-                        </p>
-                        {createPost()}
+
+                    {/* Screen */}
+                    <div className="flex justify-center gap-2 rounded-3xl border-2 border-white bg-slate-800 md:flex md:flex-initial">
+                        <div className="border border-slate-200 p-4">
+                            <p className="font-pixel text-3xl text-slate-400">
+                                Posts
+                            </p>
+                            <ul className="flex flex-col">
+                                {posts.map(createFeedItem)}
+                            </ul>
+                        </div>
+                        <div className="max-h-96 flex-1 overflow-scroll border border-slate-200 p-4">
+                            <p className="font-pixel text-3xl text-slate-400">
+                                Selected Post
+                            </p>
+                            {createPost()}
+                        </div>
                     </div>
                 </div>
             </>
