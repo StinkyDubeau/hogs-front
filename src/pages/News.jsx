@@ -32,7 +32,7 @@ export default function News(props) {
         return (
             <div key={index}>
                 <Button className="w-56" onClick={() => setSelection(index)}>
-                    <p>{post.title}</p>
+                    <p className="font-pixel text-slate-100">{post.title}</p>
                 </Button>
             </div>
         );
@@ -42,10 +42,16 @@ export default function News(props) {
         let post = posts[selection];
         return (
             <>
-                <p className="text-left font-sansui text-3xl">{post.title}</p>
-                <p className="text-left font-sansui text-xl">{post.author}</p>
-                <p className="text-left font-sansui text-lg">{post.body}</p>
-                <p className="text-right font-sansui text-xs text-slate-400">
+                <p className="font-pixell text-left text-3xl text-slate-100">
+                    {post.title}
+                </p>
+                <p className="text-left font-pixel text-xl text-slate-100">
+                    {post.author}
+                </p>
+                <p className="text-left font-pixel text-lg text-slate-100">
+                    {post.body}
+                </p>
+                <p className="text-right font-pixel text-xs text-slate-100 text-slate-400">
                     id: {post._id}
                 </p>
             </>
@@ -56,16 +62,16 @@ export default function News(props) {
         return (
             <>
                 <div className="flex justify-center gap-2  md:flex md:flex-initial">
-                    <Glass className="p-4">
-                        {/* <p className="font-sansui text-3xl">Posts</p> */}
+                    <div className="p-4">
+                        {/* <p className="font-pixel text-3xl">Posts</p> */}
                         <ul className="flex flex-col gap-2">
                             {posts.map(createFeedItem)}
                         </ul>
-                    </Glass>
-                    <Glass className="flex-1 p-4">
-                        {/* <p className="font-sansui text-3xl">Selected Post</p> */}
+                    </div>
+                    <div className="flex-1 p-4">
+                        {/* <p className="font-pixel text-3xl">Selected Post</p> */}
                         {createPost()}
-                    </Glass>
+                    </div>
                 </div>
             </>
         );
@@ -75,7 +81,7 @@ export default function News(props) {
         return (
             <div className="mt-24">
                 <span className="loading loading-dots loading-sm text-slate-200"></span>
-                <p className="font-sansui text-xl text-slate-200">
+                <p className="font-pixel text-xl text-slate-200">
                     Loading some news...
                 </p>
             </div>
