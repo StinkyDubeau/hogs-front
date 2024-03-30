@@ -25,7 +25,7 @@ More to come.
 
 ## Deployment
 
-*This is for my own memory*
+*This is for my own use*
 
 1. Deploy hogs-front to amplify
     a) define VITE_API_URL=api url
