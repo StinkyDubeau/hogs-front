@@ -4,7 +4,7 @@ import Glass from "../components/materials/Glass";
 ``;
 export default function CornerNav(props) {
     return (
-        <div className="fixed bottom-0 left-0 z-50 w-screen m-0 bg-center sm:left-1.5 sm:top-1 sm:w-auto">
+        <div className="fixed bottom-0 left-0 z-50 h-16 w-screen m-0 bg-center sm:left-1.5 sm:top-1 sm:w-auto">
             <Glass materialOnly className="rounded-xl">
                 <div className="">
                     <Link className="" to="/">
@@ -18,23 +18,15 @@ export default function CornerNav(props) {
                     <Link className="" to="/community">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
-                                communities
+                                forum
                             </span>
                         </Button>
                     </Link>
 
-                    <Link className="" to="/news">
+                    <Link className="" to="/leaderboards">
                         <Button className="h-12 w-12">
                             <span className="material-symbols-outlined mt-1 text-slate-300">
-                                news
-                            </span>
-                        </Button>
-                    </Link>
-
-                    <Link className="" to="/about">
-                        <Button className="h-12 w-12">
-                            <span className="material-symbols-outlined mt-1 text-slate-300">
-                                help
+                                trophy
                             </span>
                         </Button>
                     </Link>

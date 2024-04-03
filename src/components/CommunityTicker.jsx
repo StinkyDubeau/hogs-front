@@ -11,10 +11,11 @@ export default function CommunityTicker(props) {
         fetch(`${import.meta.env.VITE_API_URL}/api/scores`, {
             headers: new Headers({
                 API_KEY: "this is a very insecure api key",
+                "Content-Type": "application/json",
             }),
             method: "POST",
             body: JSON.stringify({
-                rows: "3",
+                rows: "30",
             }),
         })
             .then((response) => response.json())
@@ -29,9 +30,12 @@ export default function CommunityTicker(props) {
 
     function createScore(score, index) {
         return (
-            <p key={index} className="m-0 p-0 font-sansui text-3xl">
-                {`${score.user_id} got ${score.points} points on ${score.level}.`}
-            </p>
+            <div className="flex">
+                <div className="w-12"></div>
+                <p key={index} className="m-0 p-0 font-sansui text-3xl">
+                    {`${score.user_id} beat ${score.level} in ${parseInt(score.time / 1000)} seconds.`}
+                </p>
+            </div>
         );
     }
 
@@ -60,14 +64,13 @@ export default function CommunityTicker(props) {
     return (
         <div className="flex h-20 justify-between">
             <div className="flex flex-col justify-center">
-                <p className="text-center font-sansui text-3xl text-slate-200">
-                    Latest scores:
-                </p>
+                <div>
+                    <p className="text-center font-sansui text-3xl text-slate-200">
+                        Latest scores:
+                    </p>
+                </div>
             </div>
-            <div
-                materialOnly
-                className="w-[80%] rounded-xl border border-x-slate-800 border-y-slate-800 shadow-inner-2xl "
-            >
+            <div className="w-[80%] rounded-xl border border-x-slate-800 border-y-slate-800 shadow-inner-2xl">
                 {scores ? createMarquee() : createLoading()}
             </div>
         </div>

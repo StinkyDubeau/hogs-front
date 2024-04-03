@@ -12,6 +12,7 @@ export default {
                 "inner-4xl": "inset 0px 0px 100px 50px rgb(0 0 0 / 0.5)",
                 "inner-3xl": "inset 0px 0px 50px 25px rgb(0 0 0 / 0.5)",
                 "inner-2xl": "inset 0px 0px 20px 10px rgb(0 0 0 / 0.5)",
+                "inner-xl": "inset 0px 0px 10px 5px rgb(0 0 0 / 0.1)",
             },
             backdropBlur: {
                 xs: "2px",
@@ -31,6 +32,8 @@ export default {
             hogs: ["Barlow Semi Condensed", "sans-serif"],
             ipsum: ["Flow Circular", "sans-serif"],
             sansui: ["Josefin Sans", "sans-serif"],
+            pixel: ["Pixelify Sans", "mono"],
+            mono: ["mono"]
         },
     },
     plugins: [require("@pyncz/tailwind-mask-image"), require("daisyui")],
