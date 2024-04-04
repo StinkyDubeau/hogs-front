@@ -27,11 +27,13 @@ More to come.
 
 *This is for my own use*
 
-1. Deploy hogs-front to amplify
-    a) define VITE_API_URL=api url
-2. Deploy hogs-api to EC2
-3. Set hogs-front's environment variable to point to EC2's public http://IP:3001 *Ensure there is no "/" at the end of the line*
-4. Change the security group settings on EC2 to allow connections from amplify*
+1. Deploy hogs-api to EC2 (as many instances as you need)
+3. Deploy a load balancer to point to the instances you just created
+4. Define a security group for hogs-api to only accept traffic from the load balancer you just created.
+6. Deploy hogs-front to amplify
+7. Define hogs-front environment variable `VITE_API_URL=https://[dns-of-load-balancer-you-just-created]:3001` *<- No "/"*
+8. *(:*
 
-
-*Strongly consider doing this differently. An API gateway is needed, but not free.
+TODO:
+- Containerize hogs-api instances. At the moment, each instance has to be manually created by installing git and node. This will suck when scaling.
+- We will have to create a separate balancer for incoming connection from game clients. Or enable the API key authentication. Or both
