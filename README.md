@@ -36,4 +36,5 @@ More to come.
 
 TODO:
 - Containerize hogs-api instances. At the moment, each instance has to be manually created by installing git and node. This will suck when scaling.
+    - At minimum, run the server using pm2 to ensure everything runs incase of a reboot
 - We will have to create a separate balancer for incoming connection from game clients. Or enable the API key authentication. Or both
