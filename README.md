@@ -31,8 +31,8 @@ More to come.
 3. Deploy a load balancer to point to the instances you just created
 4. Define a security group for hogs-api to only accept traffic from the load balancer you just created.
 6. Deploy hogs-front to amplify
-7. Define hogs-front environment variable `VITE_API_URL=https://[dns-of-load-balancer-you-just-created]:3001` *<- No "/"*
-8. *(:*
+7. Create a CNAME registry on the domain to direct `hogs-api.domain.com` traffic to `[dns-of-load-balancer-you-just-created].` *Must end with a "."!*
+8. Define hogs-front environment variable `VITE_API_URL=hogs-api.domain.com`  *<- No "/" at the end!*
 
 TODO:
 - Containerize hogs-api instances. At the moment, each instance has to be manually created by installing git and node. This will suck when scaling.
