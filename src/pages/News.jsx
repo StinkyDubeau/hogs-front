@@ -55,8 +55,10 @@ export default function News(props) {
     function createNewsFeed() {
         return (
             <>
-                <div className="flex justify-center gap-2  md:flex md:flex-initial">
-                    <Glass className="p-4">
+                <div className="md:flex justify-center gap-2">
+
+                    {/* Large screens */}
+                    <Glass className="p-4  max-md:hidden">
                         {/* <p className="font-sansui text-3xl">Posts</p> */}
                         <ul className="flex flex-col gap-2">
                             {posts.map(createFeedItem)}
@@ -65,6 +67,12 @@ export default function News(props) {
                     <Glass className="flex-1 p-4">
                         {/* <p className="font-sansui text-3xl">Selected Post</p> */}
                         {createPost()}
+                    </Glass>
+                    <Glass className="p-4  md:hidden">
+                        {/* <p className="font-sansui text-3xl">Posts</p> */}
+                        <ul className="flex flex-col gap-2">
+                            {posts.map(createFeedItem)}
+                        </ul>
                     </Glass>
                 </div>
             </>
