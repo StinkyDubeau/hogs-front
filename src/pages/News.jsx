@@ -39,8 +39,6 @@ export default function News(props) {
         );
     }
 
-
-
     function createNewsFeed() {
         return (
             <>

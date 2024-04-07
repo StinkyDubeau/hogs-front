@@ -12,14 +12,6 @@ export default function Writer(props) {
         _id: "1234-abcd-5678-efgh"
     });
 
-    function createPost() {
-        return (
-            <>
-
-            </>
-        );
-    }
-
     return (
         <Frame noCornerNav>
             <Glass>
