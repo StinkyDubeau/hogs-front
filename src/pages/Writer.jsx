@@ -8,17 +8,13 @@ export default function Writer(props) {
         author: "John Blogpostwriter",
         abstract: "A month of backend work.",
         body: "Lorum ipsum dolor[...]",
+        _id: "1234-abcd-5678-efgh"
     });
 
     function createPost() {
         return (
             <>
-                <p className="text-left font-sansui text-3xl">{post.title}</p>
-                <p className="text-left font-sansui text-xl">{post.author}</p>
-                <p className="text-left font-sansui text-lg">{post.body}</p>
-                <p className="text-right font-sansui text-xs text-slate-400">
-                    id: {post._id}
-                </p>
+
             </>
         );
     }
@@ -29,7 +25,12 @@ export default function Writer(props) {
                 <p>This is the blog writer page.</p>
             </Glass>
             <Glass>
-                <div>{post && createPost}</div>
+            <p className="text-left font-sansui text-3xl">{post.title}</p>
+                <p className="text-left font-sansui text-xl">{post.author}</p>
+                <p className="text-left font-sansui text-lg">{post.body}</p>
+                <p className="text-right font-sansui text-xs text-slate-400">
+                    id: {post._id}
+                </p>
             </Glass>
         </Frame>
     );

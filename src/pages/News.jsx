@@ -1,4 +1,5 @@
 import Frame from "../components/Frame";
+import NewsPost from "../components/NewsPost";
 import Button from "../components/Button";
 import { useState, useEffect } from "react";
 import Glass from "../components/materials/Glass";
@@ -38,19 +39,7 @@ export default function News(props) {
         );
     }
 
-    function createPost() {
-        let post = posts[selection];
-        return (
-            <>
-                <p className="text-left font-sansui text-3xl">{post.title}</p>
-                <p className="text-left font-sansui text-xl">{post.author}</p>
-                <p className="text-left font-sansui text-lg">{post.body}</p>
-                <p className="text-right font-sansui text-xs text-slate-400">
-                    id: {post._id}
-                </p>
-            </>
-        );
-    }
+
 
     function createNewsFeed() {
         return (
@@ -66,7 +55,7 @@ export default function News(props) {
                     </Glass>
                     <Glass className="flex-1 p-4 overflow-scroll max-md:max-h-[720px]">
                         {/* <p className="font-sansui text-3xl">Selected Post</p> */}
-                        {createPost()}
+                        {NewsPost(posts[selection])}
                     </Glass>
                     <Glass className="p-4  md:hidden">
                         {/* <p className="font-sansui text-3xl">Posts</p> */}
