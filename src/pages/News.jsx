@@ -64,7 +64,7 @@ export default function News(props) {
                             {posts.map(createFeedItem)}
                         </ul>
                     </Glass>
-                    <Glass className="flex-1 p-4">
+                    <Glass className="flex-1 p-4 overflow-scroll max-md:max-h-[720px]">
                         {/* <p className="font-sansui text-3xl">Selected Post</p> */}
                         {createPost()}
                     </Glass>
