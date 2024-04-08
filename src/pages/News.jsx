@@ -1,5 +1,6 @@
 import Frame from "../components/Frame";
 import NewsPost from "../components/NewsPost";
+import LoadingDots from "../components/LoadingDots";
 import Button from "../components/Button";
 import { useState, useEffect } from "react";
 import Glass from "../components/materials/Glass";
@@ -66,23 +67,14 @@ export default function News(props) {
         );
     }
 
-    function createLoading() {
-        return (
-            <div className="mt-24">
-                <span className="loading loading-dots loading-sm text-slate-200"></span>
-                <p className="font-sansui text-xl text-slate-200">
-                    Loading some news...
-                </p>
-            </div>
-        );
-    }
+
 
     return (
         <Frame noNavbar>
             {/* Only render news component if there's something loaded. */}
             {/* TODO: Load the CRT regardless of actual state. */}
             <div className="mt-2 sm:mt-12">
-                {posts[0] ? createNewsFeed() : createLoading()}
+                {posts[0] ? createNewsFeed() : LoadingDots()}
             </div>
         </Frame>
     );

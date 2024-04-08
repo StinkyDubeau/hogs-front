@@ -2,12 +2,15 @@ import Frame from "../components/Frame";
 import Glass from "../components/materials/Glass";
 import NewsPost from "../components/NewsPost";
 import Button from "../components/Button";
+import LoadingDots from "../components/LoadingDots";
 import { useState } from "react";
 
 export default function Writer(props) {
     const now = new Date().toLocaleString();
 
+    const [published, setPublished] = useState(false);
     const [verifying, setVerifying] = useState(false);
+    const [response, setResponse] = useState();
     const [post, setPost] = useState({
         title: "",
         author: "",
@@ -17,6 +20,25 @@ export default function Writer(props) {
         body: "",
         _id: "1234-abcd-5678-efgh",
     });
+
+    function publish() {
+        fetch(`${import.meta.env.VITE_API_URL}/news/create`, {
+            method: "POST",
+            headers: new Headers({
+                API_KEY: "this is a very insecure api key",
+                "Content-Type": "application/json",
+            }),
+            body: JSON.stringify(post),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setResponse(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
 
     function createVerify() {
         console.log("CREATE VERIFY");
@@ -31,7 +53,13 @@ export default function Writer(props) {
                     <div onClick={() => setVerifying(false)}>
                         <Button>Back</Button>
                     </div>{" "}
-                    <div onClick={() => setVerifying(false)}>
+                    <div
+                        onClick={() => {
+                            publish();
+                            setVerifying(false);
+                            setPublished(true);
+                        }}
+                    >
                         <Button>Submit</Button>
                     </div>{" "}
                 </div>
@@ -140,8 +168,25 @@ export default function Writer(props) {
         );
     }
 
+    function createResponse() {
+        function success() {
+            return (
+                <>
+                    <p className="font-sansui text-left text-3xl">Your post has been submitted.</p>
+                    <p className="font-sansui">Status: {response.status}</p>
+                    <p className="font-sansui">ID of your post: {response._id}</p>
+                    <p className="font-sansui">Server response: <span className="font-mono text-xs">{response.message}</span></p>
+                </>
+            );
+        }
+
+        return <Glass>{response ? success() : LoadingDots()}</Glass>;
+    }
+
     return (
         <Frame noCornerNav>
+            {published && createResponse()}
+
             {/* Form */}
             {verifying ? createVerify() : createForm()}
 
@@ -158,7 +203,9 @@ export default function Writer(props) {
                 <div className="flex flex-col gap-6">
                     <p className="text-left font-sansui text-3xl">Glossary</p>
                     <div>
-                        <p className="font-sansui text-2xl">Abstract</p>
+                        <p className="text-left font-sansui text-2xl underline">
+                            Abstract
+                        </p>
                         <p className="text-left font-sansui">
                             20 words or less to quickly summarize your article.
                             This will be the text-equivalent of a "thumbnail"
@@ -168,7 +215,20 @@ export default function Writer(props) {
                         </p>
                     </div>
                     <div>
-                        <p className="font-sansui text-2xl">Date</p>
+                        <p className="text-left font-sansui text-2xl underline">
+                            Date
+                        </p>
+                        <p className="text-left font-sansui">
+                            Leave this field completely blank to automatically
+                            inherit a date from the time the post is submitted.
+                            This action is performed server-side whenever a news
+                            post (with no date) is submitted.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="text-left font-sansui text-2xl underline">
+                            Embed
+                        </p>
                         <p className="text-left font-sansui">
                             Leave this field completely blank to automatically
                             inherit a date from the time the post is submitted.
