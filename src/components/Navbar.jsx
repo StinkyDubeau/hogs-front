@@ -15,7 +15,9 @@ export default function Navbar() {
                             alt="studio logo"
                         />
                     </Link>
+                    
                 </div>
+                <p className="font-sansui my-2">Varpyg Developer Menu</p>
                 <div className="flex-wrap justify-center">
                     <Link to="/">
                         <Button text="Home" />
@@ -31,21 +33,10 @@ export default function Navbar() {
                     </Link>
                     <Link to="/about">
                         <Button
-                            className="bg-zinc-500 hover:bg-zinc-400"
-                            text="About*"
+                            text="About"
                         />
-                    </Link>
-                    <Link to="/community">
-                        <Button
-                            className="bg-zinc-500 hover:bg-zinc-400"
-                            text="Community*"
-                        />
-                    </Link>
-                    <Link to="/leaderboards">
-                        <Button text="Leaderboard" />
                     </Link>
                 </div>
-                <p className="text-xs text-slate-300">*No navbar</p>
             </Glass>
         </div>
     );
