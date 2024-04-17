@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <Frame noNavbar noCornerNav>
             <div className="mt-0 sm:mt-12" />
-            <Glass>
+            <Glass className="my-5">
                 <div className="relative max-h-[550px] overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
                     <video
                         muted
@@ -30,6 +30,9 @@ export default function Home() {
                         className="absolute inset-12 flex flex-col items-center justify-center"
                     >
                         <div className="mb-4 drop-shadow-md">
+                            <p className="font-sansui text-3xl text-slate-200">
+                                Varpyg presents
+                            </p>
                             <img src={HogsLogo} alt="Hogs Logo" />
                         </div>
                         <Button className="bg-[#a53b6781] backdrop-blur-xl hover:scale-125 hover:bg-[#a34091]">
@@ -64,13 +67,10 @@ export default function Home() {
                 </div> */}
             </Glass>
 
-            <Glass>
+            <Glass className="my-5">
                 <div className="mt-5">
                     <About />
                 </div>
-                <p className="mt-8 font-sansui text-2xl text-slate-50">
-                    Scroll to learn more
-                </p>
                 <span className="material-symbols-outlined mt-0 text-4xl text-slate-300">
                     expand_more
                 </span>
@@ -78,7 +78,7 @@ export default function Home() {
 
             <Glass
                 id="nonlinear"
-                className="my-10 justify-between gap-6 md:flex"
+                className="my-5 justify-between gap-6 md:flex"
             >
                 <div>
                     <p className="text-left font-sansui text-4xl font-bold text-slate-200">
@@ -101,7 +101,7 @@ export default function Home() {
 
             <Glass
                 id="immersive FPS"
-                className="my-10 justify-between gap-6 md:flex"
+                className="my-5 justify-between gap-6 md:flex"
             >
                 <div className="md:hidden">
                     {/* ENSURE YOU CHANGE BOTH SECTIONS IF UPDATING THIS TEXT! */}
@@ -134,7 +134,7 @@ export default function Home() {
 
             <Glass
                 id="nonlinear"
-                className="my-10 justify-between gap-6 md:flex"
+                className="my-5 justify-between gap-6 md:flex"
             >
                 <div>
                     <p className="text-left font-sansui text-4xl font-bold text-slate-200">
@@ -155,8 +155,8 @@ export default function Home() {
                 </div>
             </Glass>
 
-            <Glass>
-                <Button className="bg-[#a53b6781] backdrop-blur-xl hover:scale-125 hover:bg-[#a34091]">
+            <Glass className="my-5 py-8">
+                <Button className="flex w-96 justify-center bg-[#a53b6781] backdrop-blur-xl hover:scale-105 hover:bg-[#a34091]">
                     <a
                         href="https://store.steampowered.com/app/2899270/HOGS/"
                         alt="Visit HOGs' Steam Page"
@@ -175,25 +175,33 @@ export default function Home() {
                                 <path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048" />
                             </svg>
                             <p className="text-2xl text-slate-200">
-                                Wishlist Today
+                                Wishlist H.O.G.S Today
                             </p>
                         </div>
                     </a>
                 </Button>
-                <p className="font-sansui">
+                <p className="font-sansui text-xs text-slate-400">
                     H.O.G.S is in development, due to release for the 2024
                     holiday season.
                 </p>
             </Glass>
+            <Glass className="my-5">
+                <p className="font-sansui">
+                    ©2024 Valve Corporation. Steam and the Steam logo are
+                    trademarks and/or registered trademarks of Valve Corporation
+                    in the U.S. and/or other countries.
+                </p>
+                <p className="font-sansui">©2024 Varpyg</p>
+            </Glass>
 
-            <div id="steam_embed" className="my-10 flex justify-center">
+            {/* <div id="steam_embed" className="my-5 flex justify-center">
                 <iframe
                     src="https://store.steampowered.com/widget/2899270/"
                     frameborder="0"
                     width="646"
                     height="190"
                 ></iframe>
-            </div>
+            </div> */}
         </Frame>
     );
 }

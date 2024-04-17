@@ -5,7 +5,7 @@ export default function About(props) {
     return (
         <div className="text-slate-200">
             <div className="m-auto max-w-screen-lg">
-                <h1 className="font-sansui text-6xl tracking-widest">
+                <h1 className="my-5 font-sansui text-6xl tracking-widest">
                     <span className="text-7xl">A classic</span>
                     <br />
                     reimagined
