@@ -4,18 +4,8 @@ import Trailer from "../assets/trailer.webm";
 export default function About(props) {
     return (
         <div className="text-slate-200">
-            <ReactPlayer
-                playsinline
-                className="-z-50 mask-radial"
-                url={Trailer}
-                playing
-                muted
-                loop
-                width="100%"
-                height="100%"
-            />
             <div className="m-auto max-w-screen-lg">
-                <h1 className="font-sansui text-6xl tracking-widest">
+                <h1 className="my-5 font-sansui text-6xl tracking-widest">
                     <span className="text-7xl">A classic</span>
                     <br />
                     reimagined

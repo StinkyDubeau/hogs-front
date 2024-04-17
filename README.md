@@ -2,6 +2,8 @@
 
 Frontend for hogs website.
 
+Serverless branch is designed to bypass hogs-api and access mongodb directly to save on EC2 costs.
+
 ## Developing:
 
 -   npm
