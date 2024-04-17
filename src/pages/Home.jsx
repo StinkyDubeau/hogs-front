@@ -30,9 +30,6 @@ export default function Home() {
                         className="absolute inset-12 flex flex-col items-center justify-center"
                     >
                         <div className="mb-4 drop-shadow-md">
-                            <p className="font-sansui text-3xl text-slate-200">
-                                Varpyg presents
-                            </p>
                             <img src={HogsLogo} alt="Hogs Logo" />
                         </div>
                         <Button className="bg-[#a53b6781] backdrop-blur-xl hover:scale-125 hover:bg-[#a34091]">
