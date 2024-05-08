@@ -5,8 +5,8 @@ export default function About(props) {
     return (
         <div className="text-slate-200">
             <div className="m-auto max-w-screen-lg">
-                <h1 className="my-5 font-sansui text-6xl tracking-widest">
-                    <span className="text-7xl">A classic</span>
+                <h1 className="my-5 font-sansui sm:text-6xl text-4xl font-extrabold uppercase tracking-widest transition-all text-center">
+                    <span className="sm:text-7xl text-5xl tracking-widest">A classic</span>
                     <br />
                     reimagined
                 </h1>
