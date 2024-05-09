@@ -13,6 +13,7 @@ export default function Home() {
     return (
         <Frame noNavbar noCornerNav>
             <div className="mt-0 sm:mt-12" />
+            {/* Video Hero */}
             <Glass className="my-5">
                 <div className="relative max-h-[550px] overflow-hidden rounded-lg bg-zinc-600 shadow-inner-3xl">
                     <video
@@ -93,6 +94,7 @@ export default function Home() {
                 </div> */}
             </Glass>
 
+            {/* About section */}
             <Glass className="my-5">
                 <div className="mt-5">
                     <About />
@@ -107,10 +109,10 @@ export default function Home() {
                 className="my-5 justify-between gap-6 md:flex"
             >
                 <div>
-                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                    <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                         H.O.G.S is an immersive FPS
                     </p>
-                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                    <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                         Throw objects, kick down doors or smash windows and
                         flank from behind. Use the environment to your
                         advantage. Get smart, or get killed.
@@ -131,10 +133,10 @@ export default function Home() {
             >
                 <div className="md:hidden">
                     {/* ENSURE YOU CHANGE BOTH SECTIONS IF UPDATING THIS TEXT! */}
-                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                    <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                         Explore a dark reality
                     </p>
-                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                    <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                         A Post-Singularist England ruled by pigs in a story told
                         through environmental details and context clues.
                     </p>
@@ -148,10 +150,10 @@ export default function Home() {
                 </div>
                 <div className="max-md:hidden">
                     {/* ENSURE YOU CHANGE BOTH SECTIONS IF UPDATING THIS TEXT! */}
-                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                    <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                         Explore a dark reality
                     </p>
-                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                    <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                         A Post-Singularist England ruled by pigs in a story told
                         through environmental details and context clues.
                     </p>
@@ -163,10 +165,10 @@ export default function Home() {
                 className="my-5 justify-between gap-6 md:flex"
             >
                 <div>
-                    <p className="text-left font-sansui text-4xl font-bold text-slate-200">
+                    <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                         Levels are non-linear
                     </p>
-                    <p className="mt-4 text-left font-sansui text-2xl text-slate-200">
+                    <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                         There are multiple paths to choose from when engaging
                         the enemy; will you sneak in from behind enemy lines, or
                         go guns-a-blazing through the front door?
@@ -206,7 +208,7 @@ export default function Home() {
                         </div>
                     </a>
                 </Button>
-                <p className="font-sansui text-xs text-slate-400">
+                <p className="font-sansub font-semibol text-xs text-slate-400">
                     H.O.G.S is in early development, due to release for the 2024
                     holiday season.
                 </p>
@@ -215,7 +217,7 @@ export default function Home() {
             {/* Footer */}
             <Glass className="my-5">
                 <div className="flex flex-col gap-4">
-                    <p className="font-sansui text-xl -mb-2">Connect</p>
+                    <p className="-mb-2 font-sansui text-xl">Connect</p>
                     {/* Links */}
                     <div className="flex flex-wrap justify-center gap-4">
                         {/* Discord */}
