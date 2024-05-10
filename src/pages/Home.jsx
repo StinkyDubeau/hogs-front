@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <Frame noNavbar noCornerNav noPad>
             {/* Video Hero */}
-            <div className="h-screen rounded-lg bg-slate-200 text-slate-200 shadow-inner-4xl">
+            <div className="h-screen rounded-lg bg-slate-600 text-slate-200 shadow-inner-4xl">
                 <video
                     className="min-h-screen object-cover"
                     muted
