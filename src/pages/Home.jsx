@@ -219,10 +219,10 @@ export default function Home() {
                             </div>
                         </a>
                     </Button>
-                    <p className="font-sansub font-semibol text-xs text-slate-400">
+                    {/* <p className="font-sansub font-semibol text-xs text-slate-400">
                         H.O.G.S is in early development, due to release for the
                         2024 holiday season.
-                    </p>
+                    </p> */}
                 </Glass>
 
                 {/* Footer */}
