@@ -32,8 +32,9 @@ export default {
             hogs: ["Barlow Semi Condensed", "sans-serif"],
             ipsum: ["Flow Circular", "sans-serif"],
             sansui: ["Josefin Sans", "sans-serif"],
+            sansub: ["Ubuntu Sans", "sans-serif"],
             pixel: ["Pixelify Sans", "mono"],
-            mono: ["mono"]
+            mono: ["mono"],
         },
     },
     plugins: [require("@pyncz/tailwind-mask-image"), require("daisyui")],
