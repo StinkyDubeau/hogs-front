@@ -13,16 +13,16 @@ export default function Home() {
     return (
         <Frame noNavbar noCornerNav noPad>
             {/* Video Hero */}
-            <video
-                className="fixed h-screen w-screen object-cover"
-                muted
-                autoPlay
-                playsInline
-                loop
-            >
-                <source src={Trailer} type="video/mp4" />
-            </video>
-            <div className="h-screen rounded-lg text-slate-200 shadow-inner-4xl">
+            <div className="h-screen rounded-lg bg-slate-600 text-slate-200 shadow-inner-4xl">
+                <video
+                    className="min-h-screen object-cover"
+                    muted
+                    autoPlay
+                    playsInline
+                    loop
+                >
+                    <source src={Trailer} type="video/mp4" />
+                </video>
                 <div
                     id="CallToAction"
                     className="absolute inset-12 flex flex-col items-center justify-center"
@@ -31,7 +31,7 @@ export default function Home() {
                         <img src={HogsLogo} alt="Hogs Logo" />
                     </div>
                     <div className="flex flex-wrap justify-center gap-2">
-                        <Button className="bg-[#ffffff22] backdrop-blur-xl hover:z-50 hover:scale-105 hover:bg-[#f351b2]">
+                        <Button className="bg-[#f351b281] backdrop-blur-xl hover:z-50 hover:scale-105 hover:bg-[#f351b2]">
                             <a
                                 href="https://discord.com/invite/zaBS2nrY/"
                                 alt="Visit HOGs' Discord Page"
@@ -54,7 +54,7 @@ export default function Home() {
                                 </div>
                             </a>
                         </Button>
-                        <Button className="bg-[#ffffff22] backdrop-blur-xl hover:z-50 hover:scale-105  hover:bg-[#f351b2]">
+                        <Button className="bg-[#f351b281] backdrop-blur-xl hover:z-50 hover:scale-105  hover:bg-[#f351b2]">
                             <a
                                 href="https://store.steampowered.com/app/2899270/HOGS/"
                                 alt="Visit HOGs' Steam Page"
@@ -92,29 +92,16 @@ export default function Home() {
                 </div>
             </div>
 
-            <div
-                id="About"
-                className="m-auto max-w-[1280px] flex-col gap-2 p-2 sm:p-6"
-            >
+            <div id="About" className="m-auto max-w-[1280px] p-2 sm:p-6">
                 {/* About section */}
-                <Glass>
+                <Glass className="my-5">
                     <FadeInSection>
-                        <div className="mt-5 flex-col text-slate-200">
-                            <h1 className="my-5 text-center font-sansui text-4xl font-extrabold uppercase tracking-widest transition-all sm:text-6xl">
-                                <span className="text-5xl tracking-widest transition-all sm:text-7xl">
-                                    A classic
-                                </span>
-                                <br />
-                                reimagined
-                            </h1>
-                            <p className="font-sansub text-2xl font-semibold">
-                                H.O.G.S is politcal satire, bleak oppression,
-                                and fast action. The story follows Orwell's{" "}
-                                <i>Animal Farm</i>, sixteen years after the
-                                original, reimagined for a modern audience via a
-                                new interactive medium.
-                            </p>
+                        <div className="mt-5">
+                            <About />
                         </div>
+                        <span className="material-symbols-outlined mt-0 text-4xl text-slate-300">
+                            expand_more
+                        </span>
                     </FadeInSection>
                 </Glass>
 
@@ -125,7 +112,7 @@ export default function Home() {
                                 <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                                     H.O.G.S is an immersive FPS
                                 </p>
-                                <p className="mt-4 text-left font-sansub text-2xl font-semibold text-slate-200">
+                                <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                                     Throw objects, kick down doors or smash
                                     windows and flank from behind. Use the
                                     environment to your advantage. Get smart, or
@@ -151,7 +138,7 @@ export default function Home() {
                                 <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                                     Explore a dark reality
                                 </p>
-                                <p className="mt-4 text-left font-sansub text-2xl font-semibold text-slate-200">
+                                <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                                     A Post-Singularist England ruled by pigs in
                                     a story told through environmental details
                                     and context clues.
@@ -169,7 +156,7 @@ export default function Home() {
                                 <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                                     Explore a dark reality
                                 </p>
-                                <p className="mt-4 text-left font-sansub text-2xl font-semibold text-slate-200">
+                                <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                                     A Post-Singularist England ruled by pigs in
                                     a story told through environmental details
                                     and context clues.
@@ -189,7 +176,7 @@ export default function Home() {
                                 <p className="text-left font-sansui text-2xl font-bold uppercase text-slate-200">
                                     Levels are non-linear
                                 </p>
-                                <p className="mt-4 text-left font-sansub text-2xl font-semibold text-slate-200">
+                                <p className="font-sansub mt-4 text-left text-2xl font-semibold text-slate-200">
                                     There are multiple paths to choose from when
                                     engaging the enemy; will you sneak in from
                                     behind enemy lines, or go guns-a-blazing
@@ -327,6 +314,15 @@ export default function Home() {
                         </div>
                     </div>
                 </Glass>
+
+                {/* <div id="steam_embed" className="my-5 flex justify-center">
+                <iframe
+                    src="https://store.steampowered.com/widget/2899270/"
+                    frameborder="0"
+                    width="646"
+                    height="190"
+                ></iframe>
+            </div> */}
             </div>
         </Frame>
     );
