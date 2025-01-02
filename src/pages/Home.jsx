@@ -19,15 +19,15 @@ export default function Home() {
     return (
         <Frame noNavbar noCornerNav noPad>
             {/* Header, Call to action */}
-            <motion.div className="fixed z-10 flex h-24 flex-col justify-center max-sm:hidden p-4 text-slate-200">
+            <motion.div className="fixed z-10 flex h-24 flex-col justify-center p-4 text-slate-200 max-sm:hidden">
                 {showLogo && (
                     <a href="/" alt="HOGS Home">
                         <motion.img
-                            layoutScroll
                             layoutId="logo"
                             src={HogsLogo}
                             alt="Hogs Logo"
-                            className="h-8 w-fit"
+                            className="h-8"
+                            style={{ opacity: [0, 1.01] }}
                         />
                     </a>
                 )}
@@ -105,11 +105,13 @@ export default function Home() {
                 >
                     <div className="mb-4 drop-shadow-md">
                         <motion.img
+                            layoutScroll
                             layoutId="logo"
                             onViewportLeave={() => setShowLogo(true)}
                             onViewportEnter={() => setShowLogo(false)}
                             src={HogsLogo}
                             alt="Hogs Logo"
+                            style={{ opacity: [1.01] }}
                         />
                     </div>
                     <motion.div
