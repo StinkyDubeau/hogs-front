@@ -179,10 +179,7 @@ export default function Home() {
                     </FadeInSection>
                 </Glass>
 
-                <Glass
-                    id="nonlinear"
-                    className="my-5 justify-between gap-6 md:flex"
-                >
+                <Glass id="nonlinear" className="justify-between gap-6 md:flex">
                     <FadeInSection>
                         <div className="gap-2 md:flex">
                             <div>
@@ -207,7 +204,7 @@ export default function Home() {
                     </FadeInSection>
                 </Glass>
 
-                <Glass className="my-5 py-8">
+                <Glass className="py-8">
                     <Button className="bg-[#f351b281] backdrop-blur-xl hover:z-50 hover:scale-105 hover:bg-[#f351b2]">
                         <a
                             href="https://store.steampowered.com/app/2899270/HOGS/"
@@ -232,14 +229,15 @@ export default function Home() {
                             </div>
                         </a>
                     </Button>
-                    {/* <p className="font-sansub font-semibol text-xs text-slate-400">
-                        H.O.G.S is in early development, due to release for the
-                        2024 holiday season.
-                    </p> */}
+                    <p className="font-semibol font-sansub text-xs text-slate-400">
+                        H.O.G.S is an indie title in development. Support the
+                        game by wishlisting and connecting with us on social
+                        media.
+                    </p>
                 </Glass>
 
                 {/* Footer */}
-                <Glass className="my-5">
+                <Glass className="">
                     <div className="flex flex-col gap-4">
                         <p className="-mb-2 font-sansui text-xl">Connect</p>
                         {/* Links */}
