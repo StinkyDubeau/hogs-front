@@ -316,12 +316,12 @@ export default function Home() {
                         {/* Legal */}
                         <div>
                             <p className="font-sansui">
-                                ©2024 Valve Corporation. Steam and the Steam
+                                ©2025 Valve Corporation. Steam and the Steam
                                 logo are trademarks and/or registered trademarks
                                 of Valve Corporation in the U.S. and/or other
                                 countries.
                             </p>
-                            <p className="font-sansui">©2024 Varpyg</p>
+                            <p className="font-sansui">©2025 Varpyg</p>
                         </div>
                     </div>
                 </Glass>
