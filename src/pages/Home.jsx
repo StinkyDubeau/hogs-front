@@ -101,8 +101,10 @@ export default function Home() {
                 autoPlay
                 playsInline
                 loop
+                src={Trailer}
+                type="video/mp4"
             >
-                <source src={Trailer} type="video/mp4" />
+                {/* <source src={Trailer} type="video/mp4" /> Moved inline with video tag to fix Safari support. */}
             </video>
             <div className="h-screen rounded-lg text-slate-200">
                 <motion.div
