@@ -13,7 +13,6 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-    const [showLogo, setShowLogo] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
 
     const goToTop = () => {
@@ -105,7 +104,7 @@ export default function Home() {
             >
                 <source src={Trailer} type="video/mp4" />
             </video>
-            <div className="h-screen rounded-lg text-slate-200 shadow-inner-4xl">
+            <div className="h-screen rounded-lg text-slate-200">
                 <motion.div
                     id="CallToAction"
                     onViewportLeave={() => setShowButtons(true)}
