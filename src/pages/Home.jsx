@@ -208,7 +208,7 @@ export default function Home() {
                                 reimagined
                             </h1>
                             <p className="font-sansub text-2xl font-semibold">
-                                H.O.G.S is politcal satire, bleak oppression,
+                                H.O.G.S is political satire, bleak oppression,
                                 and fast action. The story follows Orwell's{" "}
                                 <i>Animal Farm</i>, sixteen years after the
                                 original, reimagined for a modern audience via a
