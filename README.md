@@ -25,7 +25,7 @@ More to come.
 
 ## Deployment
 
-*This is for my own use*
+*This is for my own use. Please message me if you need assistance.*
 
 1. Deploy hogs-api to EC2 (as many instances as you need)
 3. Deploy a load balancer to point to the instances you just created
